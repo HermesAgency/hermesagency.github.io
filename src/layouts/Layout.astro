@@ -20,8 +20,8 @@ const { title } = Astro.props
             url="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
         />
     </head>
-    <body class="h-full min-h-screen overflow-hidden bg-neutral">
-        <div class="drawer drawer-end overflow-hidden">
+    <body class="h-full min-h-screen bg-[#09090B]">
+        <div class="drawer drawer-end">
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
                 <!-- Navbar -->
@@ -36,7 +36,9 @@ const { title } = Astro.props
                             class="aspect-video h-12"
                         />
                     </div>
-                    <div class="flex items-center gap-1 lg:hidden">
+                    <div
+                        class="flex items-center gap-1 text-neutral-content lg:hidden"
+                    >
                         menu
                         <label
                             for="my-drawer-3"
@@ -96,9 +98,6 @@ const { title } = Astro.props
 
             body h3 {
                 @apply text-[45px] md:text-5xl;
-            }
-            html {
-                font-size: 18px;
             }
         </style>
     </body>
