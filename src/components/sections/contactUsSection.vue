@@ -1,0 +1,31 @@
+<template>
+    <section
+        class="relative min-h-screen rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+    >
+        <img
+            src="../../assets/arrows/arrow-contact-mobile.svg"
+            alt="arrow contact mobile"
+            class="absolute right-12"
+        />
+        <div class="mt-44 flex flex-col gap-9">
+            <h2
+                class="bg-gradient-to-br from-white to-white/30 bg-clip-text text-[54px]/tight font-bold text-transparent"
+            >
+                Contactanos y Dale a tu negocio el espacio digital que se
+                merece.
+            </h2>
+
+            <!-- Start Form -->
+            <div
+                class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px]"
+            >
+                <form
+                    action=""
+                    class="rounded-3xl bg-neutral px-6 py-12"
+                ></form>
+            </div>
+            <!-- End Form -->
+        </div>
+    </section>
+</template>
+<script setup></script>
