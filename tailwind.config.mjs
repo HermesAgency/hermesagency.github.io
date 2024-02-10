@@ -7,12 +7,11 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Oxygen', ...defaultTheme.fontFamily.sans],
-                header: ['Exo', ...defaultTheme.fontFamily.sans],
             },
         },
     },
     plugins: [require('daisyui')],
     daisyui: {
-        themes: ['synthwave'],
+        themes: ['lofi'],
     },
 }
