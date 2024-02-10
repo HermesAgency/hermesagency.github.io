@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets'
+import arrowImg from '../../assets/arrows/arrow-our-services-mobile.svg'
+import landingPageImg from '../../assets/landing-page-card-image.jpg'
+import onlineShopImg from '../../assets/tienda-virtual-diseño-web-imagen.webp'
+import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
+---
+
+<section
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+>
+    <Image src={arrowImg} alt="arrow image" class="absolute" />
+    <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
+        Nuestros Servicios
+    </h2>
+    <div class="flex w-full flex-col gap-6">
+        <!-- Start Landing Page Card -->
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={landingPageImg}
+                alt="Landing Page Economica Imagen"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Landing Page</h4>
+                <p class="text-lg text-neutral/80">
+                    La primera impresión cuenta. Con nuestras Landing Pages
+                    personalizadas, cautivamos a tus visitantes desde el primer
+                    clic. Desde presentaciones impactantes hasta formularios
+                    optimizados, creamos páginas que convierten.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Landing Page</a
+                >
+            </div>
+        </div>
+        <!-- End Landing Page Card -->
+        <!-- Start Online Shop Card -->
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={onlineShopImg}
+                alt="Landing Page Economica Imagen"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Tienda Virtual</h4>
+                <p class="text-lg text-neutral/80">
+                    Vender en línea nunca fue tan fácil. Nuestras tiendas
+                    E-commerce no solo venden, sino que atraen. Procesos de pago
+                    seguros, diseño destacado y una experiencia de compra que
+                    mantiene a los clientes regresando.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Tienda Virtual</a
+                >
+            </div>
+        </div>
+        <!-- End Online Shop Card -->
+        <!-- Start web app Card -->
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={webAppImg}
+                alt="Aplicacion Web"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Aplicación Web</h4>
+                <p class="text-lg text-neutral/80">
+                    El ultimo nivel de interactividad y accesibilidad, creamos
+                    una web app especialmente a tu medida capaz de usarse desde
+                    el navegador como cualquier pagina pero a su vez de
+                    instalarse en cualquier dispositivo.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Aplicacion Web (PWA)</a
+                >
+            </div>
+        </div>
+        <!-- End web app Card -->
+    </div>
+</section>
