@@ -4,6 +4,7 @@ import HeroSection from '../components/sections/heroSection.astro'
 import WhyAWebSection from '../components/sections/whyAWebSection.astro'
 import AboutUsSection from '../components/sections/aboutUsSection.astro'
 import OurServicesSection from '../components/sections/ourServicesSection.astro'
+import ContactUsSection from '../components/sections/contactUsSection.vue'
 ---
 
 <Layout title="Hermes Lab">
@@ -12,5 +13,6 @@ import OurServicesSection from '../components/sections/ourServicesSection.astro'
         <WhyAWebSection />
         <AboutUsSection />
         <OurServicesSection />
+        <ContactUsSection client:only="vue" />
     </main>
 </Layout>
