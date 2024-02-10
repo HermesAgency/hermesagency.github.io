@@ -20,21 +20,25 @@ const { title } = Astro.props
             url="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
         />
     </head>
-    <body class="h-full min-h-screen overflow-hidden bg-neutral">
-        <div class="drawer drawer-end overflow-hidden">
+    <body class="h-full min-h-screen bg-[#09090B]">
+        <div class="drawer drawer-end">
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
                 <!-- Navbar -->
                 <div class="navbar w-full">
                     <!-- Navbar Icon -->
-                    <div class="z-20 mx-2 flex-1 px-2 mix-blend-difference">
+                    <div
+                        class="z-20 mx-2 h-full flex-1 px-2 mix-blend-difference"
+                    >
                         <img
                             src="src/assets/Hermes_Logo_2024.svg"
                             alt="Logo"
-                            class="aspect-video h-9"
+                            class="aspect-video h-12"
                         />
                     </div>
-                    <div class="flex items-center gap-1 lg:hidden">
+                    <div
+                        class="flex items-center gap-1 text-neutral-content lg:hidden"
+                    >
                         menu
                         <label
                             for="my-drawer-3"
@@ -72,12 +76,12 @@ const { title } = Astro.props
                 <!-- content -->
                 <slot />
             </div>
-            <div class="drawer-side">
+            <div class="drawer-side overflow-hidden">
                 <label
                     for="my-drawer-3"
                     aria-label="close sidebar"
                     class="drawer-overlay"></label>
-                <ul class="menu min-h-full w-80 bg-neutral-content p-4">
+                <ul class="menu min-h-full w-80 bg-neutral-content px-4 py-16">
                     <!-- Sidebar content here -->
                     <li><a class="text-neutral">Sidebar Item 1</a></li>
                     <li><a class="text-neutral">Sidebar Item 2</a></li>
@@ -94,9 +98,6 @@ const { title } = Astro.props
 
             body h3 {
                 @apply text-[45px] md:text-5xl;
-            }
-            html {
-                font-size: 18px;
             }
         </style>
     </body>

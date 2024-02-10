@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import HeroSection from '../components/sections/heroSection.astro'
+import WhyAWebSection from '../components/sections/whyAWebSection.astro'
+import AboutUsSection from '../components/sections/aboutUsSection.astro'
+import OurServicesSection from '../components/sections/ourServicesSection.astro'
 ---
 
 <Layout title="Hermes Lab">
-    <main>
-        <section
-            id="heroSection"
-            class="px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
-        >
-        </section>
-        <!-- <section id="" class="px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"></section> -->
+    <main class="w-full">
+        <HeroSection />
+        <WhyAWebSection />
+        <AboutUsSection />
+        <OurServicesSection />
     </main>
 </Layout>

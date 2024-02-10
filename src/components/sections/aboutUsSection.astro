@@ -1,0 +1,175 @@
+---
+import { Image } from 'astro:assets'
+import aboutUsHeaderImg from '../../assets/about-us-header-image.webp'
+import inovationCardImg from '../../assets/inovation-card-image.webp'
+import designCardImg from '../../assets/design-card-image.webp'
+import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
+---
+
+<section
+    class="relative min-h-screen rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+>
+    <Image
+        src={aboutUsHeaderImg}
+        alt="sobre nosotros imagen header"
+        class="absolute left-0 top-0 w-full rounded-b-3xl opacity-80"
+    />
+    <div class="mt-96 flex w-full flex-col gap-16">
+        <div class="flex flex-col gap-[18px]">
+            <h2 class="text-[54px] font-bold text-neutral-content">
+                Sobre Nosotros
+            </h2>
+            <p class="text-lg text-neutral-content/80">
+                Somos una agencia Web con una meta clara: darte la posibilidad
+                de destacar en un mercado saturado de paginas web aburridas y
+                genericas con un diseño exclusivo y personalizado adaptado a tus
+                necesidades
+            </p>
+        </div>
+        <div class="flex flex-col gap-12">
+            <h3 class="text-[45px] font-bold text-neutral-content">
+                En Hermes Nos Declaramos...
+            </h3>
+            <!-- Card Containers -->
+            <div class="flex flex-col gap-9">
+                <!-- Inovation Card -->
+                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                    <Image
+                        src={inovationCardImg}
+                        alt="Pioneros en Inovacion"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                    />
+                    <div class="flex w-full flex-col gap-[18px]">
+                        <h3 class="text-4xl font-bold text-neutral-content">
+                            Pioneros en inovacion
+                        </h3>
+                        <p class="text-lg text-neutral-content/80">
+                            En un mundo cada vez mas digital y en constante
+                            evolucion, ya es hora de que los negocios locales
+                            tambien puedan disfrutar de los beneficios de la
+                            tecnologia moderna, moderna posta, basta de paginas
+                            web aburridas.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Inovation Card -->
+                <!-- Design Card -->
+                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                    <Image
+                        src={designCardImg}
+                        alt="Pioneros en Inovacion"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                    />
+                    <div class="flex w-full flex-col gap-[18px]">
+                        <h3 class="text-4xl font-bold text-neutral-content">
+                            La fusion de Diseño y Estrategia
+                        </h3>
+                        <p class="text-lg text-neutral-content/80">
+                            No basta con que se vea bonito, tiene que cumplir
+                            una funcion. En hermes analizamos estrategicamente
+                            cada elemento de nuestros diseños para que cumplan
+                            de la mejor manera el rol de trasmitir tu mensaje y
+                            convertir visitantes en clientes.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Design Card -->
+                <!-- experience Card -->
+                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                    <Image
+                        src={experiencieCardImg}
+                        alt="Pioneros en Inovacion"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                    />
+                    <div class="flex w-full flex-col gap-[18px]">
+                        <h3 class="text-4xl font-bold text-neutral-content">
+                            Revolucionarios Digitales
+                        </h3>
+                        <p class="text-lg text-neutral-content/80">
+                            En un mundo cada vez mas digital y en constante
+                            evolucion, ya es hora de que los negocios locales
+                            tambien puedan disfrutar de los beneficios de la
+                            tecnologia moderna, moderna posta, basta de paginas
+                            web aburridas.
+                        </p>
+                    </div>
+                </div>
+                <!-- End experience Card -->
+            </div>
+            <!-- End Cards Container -->
+            <!-- Quality Section -->
+            <div class="mt-16 flex w-full flex-col gap-9">
+                <!-- Metrics -->
+                <div class="flex justify-between">
+                    <!-- Performance Metric -->
+                    <div class="flex h-fit w-fit flex-col gap-3">
+                        <!-- Metric circle -->
+                        <div
+                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
+                        >
+                            <div
+                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                            >
+                                100
+                            </div>
+                        </div>
+                        <!-- End metric circle -->
+                        <p class="text-center text-sm text-neutral-content/60">
+                            Performance
+                        </p>
+                    </div>
+                    <!-- End Performance Metric -->
+                    <!-- Best Practices Metric -->
+                    <div class="flex h-fit w-fit flex-col gap-3">
+                        <!-- Metric circle -->
+                        <div
+                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
+                        >
+                            <div
+                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                            >
+                                100
+                            </div>
+                        </div>
+                        <!-- End metric circle -->
+                        <p class="text-center text-sm text-neutral-content/60">
+                            Best Practices
+                        </p>
+                    </div>
+                    <!-- End Best Practices Metric -->
+                    <!-- Best SEO Metric -->
+                    <div class="flex h-fit w-fit flex-col gap-3">
+                        <!-- Metric circle -->
+                        <div
+                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
+                        >
+                            <div
+                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                            >
+                                100
+                            </div>
+                        </div>
+                        <!-- End metric circle -->
+                        <p class="text-center text-sm text-neutral-content/60">
+                            SEO
+                        </p>
+                    </div>
+                    <!-- End SEO Metric -->
+                </div>
+                <!-- End Metrics Container -->
+                <div class="flex w-full flex-col gap-6">
+                    <h3 class="text-4xl font-bold text-neutral-content">
+                        Somos Perfeccionistas cuando de nuestra calidad se trata
+                    </h3>
+                    <p class="text-[18px] text-neutral-content/80">
+                        No se trata solo de que se vea bien, tiene que funcionar
+                        perfectamente. En hermes utilizamos las ultimas
+                        tecnologias del mercado y programamos utilizando altos
+                        estandares para asegurarnos que se sitio web ademas de
+                        verse increible, funcione a una velocidad impresionante.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

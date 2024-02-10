@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets'
+import heroArrowMobile from '../../assets/arrows/hero-arrow-mobile.svg'
+---
+
+<!-- Start Hero Section -->
+<section
+    id="heroSection"
+    class="relative min-h-screen bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+>
+    <Image
+        src={heroArrowMobile}
+        alt="flecha hero section mobile"
+        class="absolute -top-12 left-24 -rotate-6"
+    />
+    <div class="relative top-24 flex flex-col gap-5">
+        <h1
+            class="bg-gradient-to-br from-neutral-content to-neutral-content/60 bg-clip-text text-6xl/tight font-bold text-transparent"
+        >
+            Paginas Web <br class="md:hidden" /> A Medida
+        </h1>
+        <p class="text-neutral-content">
+            Creamos Experiencias digitales que hacen resaltar tu negocio sobre
+            cualquier otro.
+        </p>
+        <button class="btn max-w-40 rounded-3xl">Saber Mas</button>
+    </div>
+</section>
+<!-- End Hero Section -->

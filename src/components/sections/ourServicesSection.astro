@@ -1,0 +1,296 @@
+---
+import { Image } from 'astro:assets'
+import arrowImg from '../../assets/arrows/arrow-our-services-mobile.svg'
+import landingPageImg from '../../assets/landing-page-card-image.jpg'
+import onlineShopImg from '../../assets/tienda-virtual-diseño-web-imagen.webp'
+import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
+---
+
+<section
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+>
+    <Image src={arrowImg} alt="arrow image" class="absolute" />
+    <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
+        Nuestros Servicios
+    </h2>
+    <div class="flex w-full flex-col gap-6 py-9">
+        <!-- Start Landing Page Card -->
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={landingPageImg}
+                alt="Landing Page Economica Imagen"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Landing Page</h4>
+                <p class="text-lg text-neutral/80">
+                    La primera impresión cuenta. Con nuestras Landing Pages
+                    personalizadas, cautivamos a tus visitantes desde el primer
+                    clic. Desde presentaciones impactantes hasta formularios
+                    optimizados, creamos páginas que convierten.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Landing Page</a
+                >
+            </div>
+        </div>
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={onlineShopImg}
+                alt="Landing Page Economica Imagen"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Tienda Virtual</h4>
+                <p class="text-lg text-neutral/80">
+                    Vender en línea nunca fue tan fácil. Nuestras tiendas
+                    E-commerce no solo venden, sino que atraen. Procesos de pago
+                    seguros, diseño destacado y una experiencia de compra que
+                    mantiene a los clientes regresando.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Tienda Virtual</a
+                >
+            </div>
+        </div>
+        <!-- End Online Shop Card -->
+        <!-- Start web app Card -->
+        <div
+            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+        >
+            <Image
+                src={webAppImg}
+                alt="Aplicacion Web"
+                class="h-64 w-full rounded-t-3xl object-cover"
+            />
+            <div class="flex flex-col gap-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-neutral">Aplicación Web</h4>
+                <p class="text-lg text-neutral/80">
+                    El ultimo nivel de interactividad y accesibilidad, creamos
+                    una web app especialmente a tu medida capaz de usarse desde
+                    el navegador como cualquier pagina pero a su vez de
+                    instalarse en cualquier dispositivo.
+                </p>
+                <a class="link text-lg text-orange-400" href="#"
+                    >Agendar Cita: Aplicacion Web (PWA)</a
+                >
+            </div>
+        </div>
+        <!-- End web app Card -->
+    </div>
+    <div class="flex flex-col gap-9">
+        <h3 class="text-[45px] font-bold text-neutral">
+            Independiente a la opcion que elijas,todos nuestros planes incluyen:
+        </h3>
+
+        <div class="flex flex-col gap-6">
+            <!-- Included Item -->
+            <div class="flex flex-col gap-2">
+                <div class="flex justify-start gap-4">
+                    <div class="flex w-8 flex-col items-center justify-center">
+                        <!-- Start Icon -->
+                        <svg
+                            width="32"
+                            height="32"
+                            class="h-8 w-8"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_858)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M27.9281 12.791C28.1943 12.9445 28.4154 13.1653 28.5691 13.4314C28.7228 13.6974 28.8037 13.9993 28.8037 14.3066C28.8037 14.6138 28.7228 14.9157 28.5691 15.1817C28.4154 15.4478 28.1943 15.6686 27.9281 15.8221L10.4878 25.8916C10.2219 26.0452 9.92019 26.126 9.61311 26.126C9.30604 26.126 9.00436 26.0452 8.73842 25.8916C8.47248 25.7381 8.25164 25.5173 8.0981 25.2513C7.94456 24.9854 7.86372 24.6837 7.86371 24.3766L7.86371 4.23763C7.86372 3.93055 7.94456 3.62888 8.0981 3.36295C8.25164 3.09701 8.47248 2.87618 8.73842 2.72264C9.00436 2.56911 9.30604 2.48828 9.61311 2.48828C9.92019 2.48828 10.2219 2.56912 10.4878 2.72266L27.9281 12.7922V12.791Z"
+                                    fill="black"
+                                    fill-opacity="0.35"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_858">
+                                    <rect
+                                        width="32"
+                                        height="32"
+                                        fill="white"
+                                        transform="matrix(0 1 -1 0 32 0)"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- End Icon -->
+                    <h4 class="text-3xl font-bold">
+                        Objetivos de tu web alineados con tu negocio
+                    </h4>
+                </div>
+                <div class="pl-12">
+                    <p class="text-pretty text-[18px] text-neutral/80">
+                        Tu pagina web es una parte mas de tu negocio, debe tener
+                        un rol concreto y medible. <span class="font-bold"
+                            >Te ayudamos a alinear el contenido de tu pagina</span
+                        > para lograr: despertar interes,atraer visitas, ganar clientes.
+                    </p>
+                </div>
+            </div>
+            <!-- End Included Item -->
+            <!-- Included Item -->
+            <div class="flex flex-col gap-2">
+                <div class="flex justify-start gap-4">
+                    <div class="flex w-8 flex-col items-center justify-center">
+                        <!-- Start Icon -->
+                        <svg
+                            width="32"
+                            height="32"
+                            class="h-8 w-8"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_858)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M27.9281 12.791C28.1943 12.9445 28.4154 13.1653 28.5691 13.4314C28.7228 13.6974 28.8037 13.9993 28.8037 14.3066C28.8037 14.6138 28.7228 14.9157 28.5691 15.1817C28.4154 15.4478 28.1943 15.6686 27.9281 15.8221L10.4878 25.8916C10.2219 26.0452 9.92019 26.126 9.61311 26.126C9.30604 26.126 9.00436 26.0452 8.73842 25.8916C8.47248 25.7381 8.25164 25.5173 8.0981 25.2513C7.94456 24.9854 7.86372 24.6837 7.86371 24.3766L7.86371 4.23763C7.86372 3.93055 7.94456 3.62888 8.0981 3.36295C8.25164 3.09701 8.47248 2.87618 8.73842 2.72264C9.00436 2.56911 9.30604 2.48828 9.61311 2.48828C9.92019 2.48828 10.2219 2.56912 10.4878 2.72266L27.9281 12.7922V12.791Z"
+                                    fill="black"
+                                    fill-opacity="0.35"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_858">
+                                    <rect
+                                        width="32"
+                                        height="32"
+                                        fill="white"
+                                        transform="matrix(0 1 -1 0 32 0)"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- End Icon -->
+                    <h4 class="text-3xl font-bold">Analisis de SEO basico</h4>
+                </div>
+                <div class="pl-12">
+                    <p class="text-pretty text-[18px] text-neutral/80">
+                        ¿Como busca la gente lo que vendes? ¿Como encuentran tu
+                        pagina? ¿Que palabras se usan mas para buscar? ¿Cuales
+                        usa tu competencia? <span class="font-bold"
+                            >Analizamos las palabras clave basicas mas usadas
+                            para incluirlas en tu web</span
+                        > y mejorar su posicionamiento.
+                    </p>
+                </div>
+            </div>
+            <!-- End Included Item -->
+            <!-- Included Item -->
+            <div class="flex flex-col gap-2">
+                <div class="flex justify-start gap-4">
+                    <div class="flex w-8 flex-col items-center justify-center">
+                        <!-- Start Icon -->
+                        <svg
+                            width="32"
+                            height="32"
+                            class="h-8 w-8"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_858)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M27.9281 12.791C28.1943 12.9445 28.4154 13.1653 28.5691 13.4314C28.7228 13.6974 28.8037 13.9993 28.8037 14.3066C28.8037 14.6138 28.7228 14.9157 28.5691 15.1817C28.4154 15.4478 28.1943 15.6686 27.9281 15.8221L10.4878 25.8916C10.2219 26.0452 9.92019 26.126 9.61311 26.126C9.30604 26.126 9.00436 26.0452 8.73842 25.8916C8.47248 25.7381 8.25164 25.5173 8.0981 25.2513C7.94456 24.9854 7.86372 24.6837 7.86371 24.3766L7.86371 4.23763C7.86372 3.93055 7.94456 3.62888 8.0981 3.36295C8.25164 3.09701 8.47248 2.87618 8.73842 2.72264C9.00436 2.56911 9.30604 2.48828 9.61311 2.48828C9.92019 2.48828 10.2219 2.56912 10.4878 2.72266L27.9281 12.7922V12.791Z"
+                                    fill="black"
+                                    fill-opacity="0.35"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_858">
+                                    <rect
+                                        width="32"
+                                        height="32"
+                                        fill="white"
+                                        transform="matrix(0 1 -1 0 32 0)"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- End Icon -->
+                    <h4 class="text-3xl font-bold">Optimizacion total</h4>
+                </div>
+                <div class="pl-12">
+                    <p class="text-pretty text-[18px] text-neutral/80">
+                        Tanto el contenido como la velocidad del sitio estaran
+                        <span class="font-bold"
+                            >minusiosamente optimizadas para lograr la mejor
+                            experiencia posible</span
+                        > para cada usuario que la visite.
+                    </p>
+                </div>
+            </div>
+            <!-- End Included Item -->
+            <!-- Included Item -->
+            <div class="flex flex-col gap-2">
+                <div class="flex justify-start gap-4">
+                    <div class="flex w-8 flex-col items-center justify-center">
+                        <!-- Start Icon -->
+                        <svg
+                            width="32"
+                            height="32"
+                            class="h-8 w-8"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_858)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M27.9281 12.791C28.1943 12.9445 28.4154 13.1653 28.5691 13.4314C28.7228 13.6974 28.8037 13.9993 28.8037 14.3066C28.8037 14.6138 28.7228 14.9157 28.5691 15.1817C28.4154 15.4478 28.1943 15.6686 27.9281 15.8221L10.4878 25.8916C10.2219 26.0452 9.92019 26.126 9.61311 26.126C9.30604 26.126 9.00436 26.0452 8.73842 25.8916C8.47248 25.7381 8.25164 25.5173 8.0981 25.2513C7.94456 24.9854 7.86372 24.6837 7.86371 24.3766L7.86371 4.23763C7.86372 3.93055 7.94456 3.62888 8.0981 3.36295C8.25164 3.09701 8.47248 2.87618 8.73842 2.72264C9.00436 2.56911 9.30604 2.48828 9.61311 2.48828C9.92019 2.48828 10.2219 2.56912 10.4878 2.72266L27.9281 12.7922V12.791Z"
+                                    fill="black"
+                                    fill-opacity="0.35"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_858">
+                                    <rect
+                                        width="32"
+                                        height="32"
+                                        fill="white"
+                                        transform="matrix(0 1 -1 0 32 0)"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- End Icon -->
+                    <h4 class="text-3xl font-bold">
+                        Asesoramiento post entrega de 3 meses
+                    </h4>
+                </div>
+                <div class="pl-12">
+                    <p class="text-pretty text-[18px] text-neutral/80">
+                        Si algo necesita ajustes o mejoras,o tienes alguna duda,
+                        estamos aquí para asegurarnos de que tu presencia online
+                        siga siendo excelente. Durante 3 meses tienes acceso a
+                        <span class="font-bold"
+                            >Asesoramiento inmediato por Whatsapp</span
+                        >. (Pasado el plazo pasan a ser consultas de
+                        mantenimiento)
+                    </p>
+                </div>
+            </div>
+            <!-- End Included Item -->
+        </div>
+        <div class="flex w-full flex-col gap-6">
+            <p class="text-lg text-neutral">
+                ¿Tienes alguna duda?¿No sabes cual plan es ideal para vos?
+                Reserva una charla de Asesoria completamente gratis ahora!
+            </p>
+            <button class="btn btn-secondary rounded-3xl"
+                >Reservar Asesoria Gratis</button
+            >
+        </div>
+    </div>
+</section>
