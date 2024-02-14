@@ -7,7 +7,7 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
 ---
 
 <section
-    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
 >
     <Image src={arrowImg} alt="arrow image" class="absolute" />
     <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
@@ -288,9 +288,14 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
                 ¿Tienes alguna duda?¿No sabes cual plan es ideal para vos?
                 Reserva una charla de Asesoria completamente gratis ahora!
             </p>
-            <button class="btn btn-secondary rounded-3xl"
-                >Reservar Asesoria Gratis</button
+            <div
+                class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
             >
+                <button
+                    class="btn w-full rounded-3xl bg-neutral text-neutral-content"
+                    >Reservar Asesoria Gratis</button
+                >
+            </div>
         </div>
     </div>
 </section>

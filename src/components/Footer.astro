@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+import HermesLogo from '../assets/Hermes_Logo_2024.svg'
+---
+
+<footer class="footer rounded-t-3xl bg-base-200 p-10 text-base-content">
+    <aside class="">
+        <div class="flex justify-start mix-blend-difference">
+            <Image
+                src={HermesLogo}
+                alt="Logo Hermes, Logo de la agencia"
+                class="aspect-video h-16 w-fit"
+            />
+        </div>
+        <p class="pl-4 text-lg">La puerta grande hacia el mundo digital.</p>
+    </aside>
+    <nav>
+        <h4 class="footer-title text-2xl font-bold text-neutral opacity-80">
+            Servicios
+        </h4>
+        <a class="link-hover link pl-4 text-lg">Landing Page</a>
+        <a class="link-hover link pl-4 text-lg">Tienda Online</a>
+        <a class="link-hover link pl-4 text-lg">Aplicacion Web(PWA)</a>
+        <a class="link-hover link pl-4 text-lg">Asesoria Gratuita</a>
+    </nav>
+    <nav>
+        <h4 class="footer-title text-2xl font-bold text-neutral opacity-80">
+            Agencia
+        </h4>
+        <a class="link-hover link pl-4 text-lg">Sobre Nosotros</a>
+        <a class="link-hover link pl-4 text-lg">Beneficios de una Web</a>
+        <a class="link-hover link pl-4 text-lg">Nuestros Servicios</a>
+        <a class="link-hover link pl-4 text-lg">Contacto</a>
+    </nav>
+    <nav>
+        <h4 class="footer-title text-2xl font-bold text-neutral opacity-80">
+            Legal
+        </h4>
+        <a class="link-hover link pl-4 text-lg">Politica de Cookies</a>
+        <a class="link-hover link pl-4 text-lg">Situacion Fiscal</a>
+        <a class="link-hover link pl-4 text-lg">Terminos de uso</a>
+        <a class="link-hover link pl-4 text-lg">Terminos de Privacidad</a>
+    </nav>
+</footer>
