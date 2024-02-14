@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import aboutUsArrowMobile from '../../assets/arrows/arrow-aboutus-mobile.svg'
+import aboutUsArrowTablet from '../../assets/arrows/arrow-aboutus-tablet.svg'
 import aboutUsHeaderImg from '../../assets/about-us-header-image.webp'
 import inovationCardImg from '../../assets/inovation-card-image.webp'
 import designCardImg from '../../assets/design-card-image.webp'
@@ -13,14 +14,20 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
     <Image
         src={aboutUsHeaderImg}
         alt="sobre nosotros imagen header"
-        class="absolute left-0 top-0 max-h-96 w-full rounded-b-3xl opacity-80 sm:object-cover"
+        class="absolute top-0 max-h-96 w-full rounded-b-3xl opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover"
     />
     <Image
         src={aboutUsArrowMobile}
         alt="Arrow for about us title"
-        class="absolute -right-6 top-96"
+        class="absolute -right-6 top-96 sm:hidden"
     />
-    <div class="mt-96 flex w-full flex-col gap-16">
+    <!-- arrow Only visible after sm -->
+    <Image
+        src={aboutUsArrowTablet}
+        alt="Arrow for about us title"
+        class="hidden sm:absolute sm:-left-0 sm:top-40 sm:block"
+    />
+    <div class="mt-96 flex w-full flex-col gap-16 sm:mt-24">
         <div class="flex flex-col gap-[18px]">
             <h2 class="text-[54px] font-bold text-neutral-content">
                 Sobre Nosotros
