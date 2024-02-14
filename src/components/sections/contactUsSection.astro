@@ -1,31 +1,233 @@
-<template>
-    <section
-        class="relative min-h-screen rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
-    >
-        <img
-            src="../../assets/arrows/arrow-contact-mobile.svg"
-            alt="arrow contact mobile"
-            class="absolute right-12"
-        />
-        <div class="mt-44 flex flex-col gap-9">
-            <h2
-                class="bg-gradient-to-br from-white to-white/30 bg-clip-text text-[54px]/tight font-bold text-transparent"
-            >
-                Contactanos y Dale a tu negocio el espacio digital que se
-                merece.
-            </h2>
+---
+import { Image } from 'astro:assets'
+import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
+---
 
-            <!-- Start Form -->
-            <div
-                class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
+<section
+    class="relative min-h-screen rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+>
+    <Image src={ArrowImgMobile} alt="arrow image" class="absolute right-12" />
+    <div class="mt-44 flex flex-col gap-9">
+        <h2
+            class="bg-gradient-to-br from-white to-white/30 bg-clip-text text-[54px]/tight font-bold text-transparent"
+        >
+            Contactanos y Dale a tu negocio el espacio digital que se merece.
+        </h2>
+
+        <!-- Start Form -->
+        <div
+            class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
+        >
+            <form
+                action=""
+                class="flex flex-col gap-6 rounded-3xl bg-neutral px-[18px] py-9"
             >
-                <form
-                    action=""
-                    class="rounded-3xl bg-neutral px-6 py-12"
-                ></form>
-            </div>
-            <!-- End Form -->
+                <!-- Name Input -->
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text text-neutral-content"
+                            >Nombre:</span
+                        >
+                    </div>
+                    <input
+                        type="text"
+                        placeholder="Ejemplo: Carlos Espinoza"
+                        class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:text-sm placeholder:text-neutral-content/60 focus-visible:border-b-[2px] focus-visible:border-amber-200"
+                    />
+                </label>
+                <!-- End Name Input -->
+                <!-- Email Input -->
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text text-neutral-content"
+                            >Correo Electronico (opcional):</span
+                        >
+                    </div>
+                    <input
+                        type="text"
+                        placeholder="Ejemplo: carlosespinoza@gmail.com"
+                        class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:text-sm placeholder:text-neutral-content/60 focus-visible:border-b-[2px] focus-visible:border-amber-200"
+                    />
+                </label>
+                <!-- End Email Input -->
+                <!-- Tel Input -->
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text text-neutral-content"
+                            >Telefono:</span
+                        >
+                    </div>
+                    <input
+                        type="text"
+                        placeholder="Ejemplo: 3447 123456"
+                        class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:text-sm placeholder:text-neutral-content/60 focus-visible:border-b-[2px] focus-visible:border-amber-200"
+                    />
+                </label>
+                <!-- End Tel Input -->
+                <!-- message Input -->
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text text-neutral-content"
+                            >Mensaje (opcional):</span
+                        >
+                    </div>
+                    <textarea
+                        placeholder="Ejemplo: Me comunico por una Landing Page para mi negocio..."
+                        class="textarea-ghost w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:text-sm placeholder:text-neutral-content/60 focus-visible:border-b-[2px] focus-visible:border-amber-200"
+                    ></textarea>
+                </label>
+                <!-- End Tel Input -->
+                <!-- Select Input -->
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text text-neutral-content"
+                            >What is your name?</span
+                        >
+                    </div>
+                    <select
+                        class="select select-ghost w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 focus-visible:border-b-[2px] focus-visible:border-amber-200 focus-visible:text-neutral-content"
+                    >
+                        <option disabled selected>Tipo De Pagina</option>
+                        <option class="text-neutral-content"
+                            >Landing Page</option
+                        >
+                        <option class="text-neutral-content"
+                            >Tienda Virtual</option
+                        >
+                        <option class="text-neutral-content"
+                            >Aplicacion Web (PWA)</option
+                        >
+                    </select>
+                </label>
+                <!-- End Select Input -->
+                <div
+                    class="rounded-2xl bg-gradient-to-br from-amber-400/80 to-black/60 p-[1px] shadow-xl"
+                >
+                    <button
+                        class="from-[#FB923C]/ btn w-full rounded-2xl border-none bg-gradient-to-br to-orange-600/60 text-neutral-content"
+                        >Contactar Ahora</button
+                    >
+                </div>
+                <div
+                    class="divider text-sm text-neutral-content before:bg-amber-300/20 after:bg-amber-300/20"
+                >
+                    o contacta por
+                </div>
+                <div class="flex justify-around">
+                    <!-- Facebook Btn -->
+                    <button
+                        class="btn btn-square btn-ghost flex items-center justify-center"
+                        ><svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 36 36"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M30.5998 1.7998H5.3998C3.4198 1.7998 1.7998 3.4198 1.7998 5.3998V30.5998C1.7998 32.5816 3.4198 34.1998 5.3998 34.1998H17.9998V21.5998H14.3998V17.1448H17.9998V13.4548C17.9998 9.5596 20.1814 6.8236 24.7786 6.8236L28.024 6.8272V11.5162H25.8694C24.0802 11.5162 23.3998 12.859 23.3998 14.1046V17.1466H28.0222L26.9998 21.5998H23.3998V34.1998H30.5998C32.5798 34.1998 34.1998 32.5816 34.1998 30.5998V5.3998C34.1998 3.4198 32.5798 1.7998 30.5998 1.7998Z"
+                                fill="#F97316"></path>
+                        </svg>
+                    </button>
+                    <!-- X Button -->
+                    <button
+                        class="btn btn-square btn-ghost flex items-center justify-center"
+                        ><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_687)">
+                                <path
+                                    d="M18.9792 13.55L30.6357 0H27.8732L17.7522 11.765L9.66824 0H0.344238L12.5687 17.791L0.344238 32H3.10674L13.7952 19.5758L22.3322 32H31.6562L18.9785 13.55H18.9792ZM15.1957 17.9475L13.957 16.176L4.10199 2.0795H8.34499L16.2977 13.456L17.5362 15.2275L27.8745 30.015H23.632L15.1957 17.9482V17.9475Z"
+                                    fill="#F97316"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_687">
+                                    <rect width="32" height="32" fill="white"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <!-- Email Btn -->
+                    <button
+                        class="btn btn-square btn-ghost flex items-center justify-center"
+                        ><svg
+                            width="44"
+                            height="44"
+                            viewBox="0 0 44 44"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M40.3332 10.9997C40.3332 8.98301 38.6832 7.33301 36.6665 7.33301H7.33317C5.3165 7.33301 3.6665 8.98301 3.6665 10.9997V32.9997C3.6665 35.0163 5.3165 36.6663 7.33317 36.6663H36.6665C38.6832 36.6663 40.3332 35.0163 40.3332 32.9997V10.9997ZM36.6665 10.9997L21.9998 20.1663L7.33317 10.9997H36.6665ZM36.6665 32.9997H7.33317V14.6663L21.9998 23.833L36.6665 14.6663V32.9997Z"
+                                fill="#F97316"></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
-    </section>
-</template>
-<script setup></script>
+        <!-- End Form -->
+        <!-- Start Contact Info -->
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+                <h4 class="text-4xl font-bold text-neutral-content/40">
+                    Info de Contacto
+                </h4>
+                <p class="text-[18px] text-neutral-content/40">
+                    (toca directamente sobre los iconos para agendar
+                    directamente)
+                </p>
+            </div>
+            <div class="flex flex-col gap-[18px]">
+                <!-- Phone Info Contact -->
+                <a href="" class="flex items-center justify-start gap-[18px]"
+                    ><svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g clip-path="url(#clip0_24_697)">
+                            <path
+                                d="M7.30797 2.65561C7.1899 2.50374 7.04087 2.37872 6.87077 2.28886C6.70067 2.19901 6.5134 2.14637 6.3214 2.13446C6.1294 2.12254 5.93706 2.15161 5.75716 2.21974C5.57726 2.28787 5.41391 2.3935 5.27797 2.52961L3.20997 4.59961C2.24397 5.56761 1.88797 6.93761 2.30997 8.13961C4.06343 13.1138 6.91227 17.6304 10.646 21.3556C14.3711 25.0893 18.8877 27.9382 23.862 29.6916C25.064 30.1136 26.434 29.7576 27.402 28.7916L29.47 26.7236C29.6061 26.5877 29.7117 26.4243 29.7798 26.2444C29.848 26.0645 29.877 25.8722 29.8651 25.6802C29.8532 25.4882 29.8006 25.3009 29.7107 25.1308C29.6209 24.9607 29.4958 24.8117 29.344 24.6936L24.73 21.1056C24.5676 20.98 24.3788 20.8928 24.1779 20.8506C23.9771 20.8083 23.7692 20.8121 23.57 20.8616L19.19 21.9556C18.6053 22.1007 17.993 22.0925 17.4125 21.9317C16.8319 21.7709 16.3026 21.4629 15.876 21.0376L10.964 16.1236C10.5383 15.6971 10.23 15.168 10.0688 14.5874C9.90765 14.0068 9.89909 13.3945 10.044 12.8096L11.14 8.42961C11.1895 8.23038 11.1933 8.02253 11.151 7.82163C11.1087 7.62074 11.0216 7.43201 10.896 7.26961L7.30797 2.65561ZM3.76797 1.02161C4.11795 0.671512 4.53842 0.399874 5.00144 0.224736C5.46447 0.0495976 5.95945 -0.0250331 6.45353 0.00579951C6.94761 0.0366321 7.42947 0.172222 7.86713 0.403567C8.30478 0.634911 8.68822 0.956716 8.99197 1.34761L12.58 5.95961C13.238 6.80561 13.47 7.90761 13.21 8.94761L12.116 13.3276C12.0598 13.5545 12.0631 13.792 12.1254 14.0173C12.1878 14.2425 12.3071 14.4479 12.472 14.6136L17.386 19.5276C17.5519 19.6928 17.7576 19.8123 17.9832 19.8747C18.2089 19.9371 18.4468 19.9401 18.674 19.8836L23.052 18.7896C23.5653 18.662 24.1008 18.6524 24.6183 18.7616C25.1358 18.8707 25.6219 19.0957 26.04 19.4196L30.652 23.0076C32.31 24.2976 32.462 26.7476 30.978 28.2296L28.91 30.2976C27.43 31.7776 25.218 32.4276 23.156 31.7016C17.8773 29.8468 13.085 26.8251 9.13597 22.8616C5.17271 18.9131 2.15107 14.1216 0.295965 8.84361C-0.428035 6.78361 0.221965 4.56961 1.70197 3.08961L3.76797 1.02161Z"
+                                fill="#F97316"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_24_697">
+                                <rect width="32" height="32" fill="white"
+                                ></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="text-[18px] font-bold text-neutral-content"
+                        >+54 3447 402668</span
+                    >
+                </a>
+                <!-- End phone Info contact -->
+                <!-- Mail Contact -->
+                <a href="" class="flex items-center justify-start gap-[18px]"
+                    ><svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M28 6H4C3.46957 6 2.96086 6.21071 2.58579 6.58579C2.21071 6.96086 2 7.46957 2 8V24C2 24.5304 2.21071 25.0391 2.58579 25.4142C2.96086 25.7893 3.46957 26 4 26H28C28.5304 26 29.0391 25.7893 29.4142 25.4142C29.7893 25.0391 30 24.5304 30 24V8C30 7.46957 29.7893 6.96086 29.4142 6.58579C29.0391 6.21071 28.5304 6 28 6ZM25.8 8L16 14.78L6.2 8H25.8ZM4 24V8.91L15.43 16.82C15.5974 16.9361 15.7963 16.9984 16 16.9984C16.2037 16.9984 16.4026 16.9361 16.57 16.82L28 8.91V24H4Z"
+                            fill="#F97316"></path>
+                    </svg>
+
+                    <span class="text-[18px] font-bold text-neutral-content"
+                        >hermesagenciaweb@gmail.com</span
+                    >
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
