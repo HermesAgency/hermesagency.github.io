@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import aboutUsArrowMobile from '../../assets/arrows/arrow-aboutus-mobile.svg'
 import aboutUsHeaderImg from '../../assets/about-us-header-image.webp'
 import inovationCardImg from '../../assets/inovation-card-image.webp'
 import designCardImg from '../../assets/design-card-image.webp'
@@ -13,6 +14,11 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
         src={aboutUsHeaderImg}
         alt="sobre nosotros imagen header"
         class="absolute left-0 top-0 w-full rounded-b-3xl opacity-80"
+    />
+    <Image
+        src={aboutUsArrowMobile}
+        alt="Arrow for about us title"
+        class="absolute -right-6 top-96"
     />
     <div class="mt-96 flex w-full flex-col gap-16">
         <div class="flex flex-col gap-[18px]">
