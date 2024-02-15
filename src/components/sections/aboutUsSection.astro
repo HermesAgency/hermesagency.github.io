@@ -9,7 +9,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
 ---
 
 <section
-    class="relative min-h-screen overflow-hidden rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 pb-40 pt-8 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20"
 >
     <Image
         src={aboutUsHeaderImg}
@@ -123,14 +123,16 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 <!-- Metrics -->
                 <div class="flex flex-col">
                     <!-- Visible After sm breakpoint:  -->
-                    <div class="flex justify-around">
+                    <div
+                        class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%]"
+                    >
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!--Accessibily Metric circle -->
                             <div
-                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 md:h-[136px] md:w-[140px]"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
                                 <div
-                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content md:px-10 md:py-[42px]"
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
                                 >
                                     100
                                 </div>
@@ -146,10 +148,10 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!--Design Metric circle -->
                             <div
-                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 md:h-[136px] md:w-[140px]"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
                                 <div
-                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content md:px-10 md:py-[42px]"
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
                                 >
                                     100
                                 </div>
@@ -158,22 +160,22 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                             <p
                                 class="text-center text-sm text-neutral-content/60 md:text-lg"
                             >
-                                Accessibily
+                                Design
                             </p>
                         </div>
                         <!-- End Design Metric -->
                     </div>
 
                     <!-- Visible until Mobile -->
-                    <div class="flex justify-between sm:relative sm:-top-6">
+                    <div class="flex justify-between sm:relative md:-top-6">
                         <!-- Performance Metric -->
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!-- Metric circle -->
                             <div
-                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 md:h-[136px] md:w-[140px]"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
                                 <div
-                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content md:px-10 md:py-[42px]"
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
                                 >
                                     100
                                 </div>
@@ -190,10 +192,10 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!-- Metric circle -->
                             <div
-                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 md:h-[136px] md:w-[140px]"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
                                 <div
-                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content md:px-10 md:py-[42px]"
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
                                 >
                                     100
                                 </div>
@@ -210,10 +212,10 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!-- Metric circle -->
                             <div
-                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 md:h-[136px] md:w-[140px]"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
                                 <div
-                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content md:px-10 md:py-[42px]"
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
                                 >
                                     100
                                 </div>
@@ -230,10 +232,12 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 </div>
                 <!-- End Metrics Container -->
                 <div class="flex w-full flex-col gap-6">
-                    <h3 class="text-4xl font-bold text-neutral-content">
+                    <h3
+                        class="text-4xl font-bold text-neutral-content md:text-5xl"
+                    >
                         Somos Perfeccionistas cuando de nuestra calidad se trata
                     </h3>
-                    <p class="text-[18px] text-neutral-content/80">
+                    <p class="text-balance text-[18px] text-neutral-content/80">
                         No se trata solo de que se vea bien, tiene que funcionar
                         perfectamente. En hermes utilizamos las ultimas
                         tecnologias del mercado y programamos utilizando altos
