@@ -1,18 +1,95 @@
 ---
 import { Image } from 'astro:assets'
 import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
+import ArrowImgLarge from '../../assets/arrows/arrow-contact-laptop.svg'
 ---
 
 <section
     class="relative min-h-screen rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
 >
-    <Image src={ArrowImgMobile} alt="arrow image" class="absolute right-12" />
-    <div class="mt-44 flex flex-col gap-9">
-        <h2
-            class="bg-gradient-to-br from-white to-white/30 bg-clip-text text-[54px]/tight font-bold text-transparent"
-        >
-            Contactanos y Dale a tu negocio el espacio digital que se merece.
-        </h2>
+    <Image
+        src={ArrowImgMobile}
+        alt="arrow image"
+        class="absolute right-12 lg:hidden"
+    />
+    <Image
+        src={ArrowImgLarge}
+        alt="arrow image"
+        class="absolute left-36 top-0 hidden lg:block"
+    />
+
+    <div class="mt-44 grid grid-cols-1 gap-9 lg:mt-24 lg:grid-cols-2">
+        <div class="lg:flex lg:flex-col lg:justify-start lg:gap-6 lg:pt-12">
+            <h2
+                class="bg-gradient-to-br from-white to-white/50 bg-clip-text text-[54px]/tight font-bold text-transparent"
+            >
+                Contactanos y Dale a tu negocio el espacio digital que se
+                merece.
+            </h2>
+            <!-- Start Contact Info -->
+            <div class="hidden lg:flex lg:flex-col lg:gap-6">
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-4xl font-bold text-neutral-content/40">
+                        Info de Contacto
+                    </h4>
+                    <p class="text-[18px] text-neutral-content/40">
+                        (toca directamente sobre los iconos para agendar
+                        directamente)
+                    </p>
+                </div>
+                <div class="flex flex-col gap-[18px]">
+                    <!-- Phone Info Contact -->
+                    <a
+                        href=""
+                        class="flex items-center justify-start gap-[18px]"
+                        ><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_24_697)">
+                                <path
+                                    d="M7.30797 2.65561C7.1899 2.50374 7.04087 2.37872 6.87077 2.28886C6.70067 2.19901 6.5134 2.14637 6.3214 2.13446C6.1294 2.12254 5.93706 2.15161 5.75716 2.21974C5.57726 2.28787 5.41391 2.3935 5.27797 2.52961L3.20997 4.59961C2.24397 5.56761 1.88797 6.93761 2.30997 8.13961C4.06343 13.1138 6.91227 17.6304 10.646 21.3556C14.3711 25.0893 18.8877 27.9382 23.862 29.6916C25.064 30.1136 26.434 29.7576 27.402 28.7916L29.47 26.7236C29.6061 26.5877 29.7117 26.4243 29.7798 26.2444C29.848 26.0645 29.877 25.8722 29.8651 25.6802C29.8532 25.4882 29.8006 25.3009 29.7107 25.1308C29.6209 24.9607 29.4958 24.8117 29.344 24.6936L24.73 21.1056C24.5676 20.98 24.3788 20.8928 24.1779 20.8506C23.9771 20.8083 23.7692 20.8121 23.57 20.8616L19.19 21.9556C18.6053 22.1007 17.993 22.0925 17.4125 21.9317C16.8319 21.7709 16.3026 21.4629 15.876 21.0376L10.964 16.1236C10.5383 15.6971 10.23 15.168 10.0688 14.5874C9.90765 14.0068 9.89909 13.3945 10.044 12.8096L11.14 8.42961C11.1895 8.23038 11.1933 8.02253 11.151 7.82163C11.1087 7.62074 11.0216 7.43201 10.896 7.26961L7.30797 2.65561ZM3.76797 1.02161C4.11795 0.671512 4.53842 0.399874 5.00144 0.224736C5.46447 0.0495976 5.95945 -0.0250331 6.45353 0.00579951C6.94761 0.0366321 7.42947 0.172222 7.86713 0.403567C8.30478 0.634911 8.68822 0.956716 8.99197 1.34761L12.58 5.95961C13.238 6.80561 13.47 7.90761 13.21 8.94761L12.116 13.3276C12.0598 13.5545 12.0631 13.792 12.1254 14.0173C12.1878 14.2425 12.3071 14.4479 12.472 14.6136L17.386 19.5276C17.5519 19.6928 17.7576 19.8123 17.9832 19.8747C18.2089 19.9371 18.4468 19.9401 18.674 19.8836L23.052 18.7896C23.5653 18.662 24.1008 18.6524 24.6183 18.7616C25.1358 18.8707 25.6219 19.0957 26.04 19.4196L30.652 23.0076C32.31 24.2976 32.462 26.7476 30.978 28.2296L28.91 30.2976C27.43 31.7776 25.218 32.4276 23.156 31.7016C17.8773 29.8468 13.085 26.8251 9.13597 22.8616C5.17271 18.9131 2.15107 14.1216 0.295965 8.84361C-0.428035 6.78361 0.221965 4.56961 1.70197 3.08961L3.76797 1.02161Z"
+                                    fill="#F97316"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24_697">
+                                    <rect width="32" height="32" fill="white"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="text-[18px] font-bold text-neutral-content"
+                            >+54 3447 402668</span
+                        >
+                    </a>
+                    <!-- End phone Info contact -->
+                    <!-- Mail Contact -->
+                    <a
+                        href=""
+                        class="flex items-center justify-start gap-[18px]"
+                        ><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M28 6H4C3.46957 6 2.96086 6.21071 2.58579 6.58579C2.21071 6.96086 2 7.46957 2 8V24C2 24.5304 2.21071 25.0391 2.58579 25.4142C2.96086 25.7893 3.46957 26 4 26H28C28.5304 26 29.0391 25.7893 29.4142 25.4142C29.7893 25.0391 30 24.5304 30 24V8C30 7.46957 29.7893 6.96086 29.4142 6.58579C29.0391 6.21071 28.5304 6 28 6ZM25.8 8L16 14.78L6.2 8H25.8ZM4 24V8.91L15.43 16.82C15.5974 16.9361 15.7963 16.9984 16 16.9984C16.2037 16.9984 16.4026 16.9361 16.57 16.82L28 8.91V24H4Z"
+                                fill="#F97316"></path>
+                        </svg>
+
+                        <span class="text-[18px] font-bold text-neutral-content"
+                            >hermesagenciaweb@gmail.com</span
+                        >
+                    </a>
+                </div>
+            </div>
+            <!-- End contact Info -->
+        </div>
 
         <!-- Start Form -->
         <div
@@ -23,7 +100,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 class="flex flex-col gap-6 rounded-3xl bg-neutral px-[18px] py-9"
             >
                 <!-- Name Input -->
-                <label class="form-control w-full max-w-2xl">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text text-neutral-content"
                             >Nombre:</span
@@ -37,7 +114,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 </label>
                 <!-- End Name Input -->
                 <!-- Email Input -->
-                <label class="form-control w-full max-w-2xl">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text text-neutral-content"
                             >Correo Electronico (opcional):</span
@@ -51,7 +128,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 </label>
                 <!-- End Email Input -->
                 <!-- Tel Input -->
-                <label class="form-control w-full max-w-2xl">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text text-neutral-content"
                             >Telefono:</span
@@ -65,7 +142,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 </label>
                 <!-- End Tel Input -->
                 <!-- message Input -->
-                <label class="form-control w-full max-w-2xl">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text text-neutral-content"
                             >Mensaje (opcional):</span
@@ -78,7 +155,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 </label>
                 <!-- End Tel Input -->
                 <!-- Select Input -->
-                <label class="form-control w-full max-w-2xl">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text text-neutral-content"
                             >What is your name?</span
@@ -172,7 +249,7 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
         </div>
         <!-- End Form -->
         <!-- Start Contact Info -->
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 lg:hidden">
             <div class="flex flex-col gap-2">
                 <h4 class="text-4xl font-bold text-neutral-content/40">
                     Info de Contacto
@@ -229,5 +306,6 @@ import ArrowImgMobile from '../../assets/arrows/arrow-contact-mobile.svg'
                 </a>
             </div>
         </div>
+        <!-- End contact Info -->
     </div>
 </section>
