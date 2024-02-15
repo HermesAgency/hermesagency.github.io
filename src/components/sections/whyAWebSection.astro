@@ -8,21 +8,28 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
     id=""
     class="relative min-h-screen rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
 >
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-10 md:gap-16">
         <div class="relative h-full w-full">
             <Image
                 src={webAdvantajesImage}
                 alt="porque Tener una pagina Web? Imagen"
-                class="z-20 drop-shadow-2xl"
+                class="z-20 drop-shadow-2xl md:mx-auto md:aspect-square md:max-w-xl"
             />
             <Image
                 src={webAdvantajesArrowMobile}
                 alt="arrow for whyAWeb"
-                class="absolute -bottom-8 right-32 z-10"
+                class="absolute -bottom-8 right-32 z-10 md:hidden"
+            />
+            <Image
+                src={webAdvantajesArrowMobile}
+                alt="arrow for whyAWeb"
+                class="hidden md:absolute md:-bottom-44 md:left-1/3 md:block md:aspect-[1/2] md:w-44 md:rotate-[24deg]"
             />
         </div>
         <div class="flex flex-col gap-4">
-            <h2 class="text-5xl font-bold">Porque Necesitas una Pagina Web?</h2>
+            <h2 class="text-5xl font-bold md:text-[64px]">
+                Porque Necesitas una Pagina Web?
+            </h2>
             <p>
                 Cerra los ojos e imagina por un momento, que puedes sin tener
                 que hacer nada, trasmitirle a cientos y miles al mismo tiempo tu
@@ -32,8 +39,10 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
             </p>
         </div>
     </div>
-    <div class="flex flex-col gap-9 pt-16">
-        <h3 class="text-4xl font-bold">Beneficios de digitalizar tu negocio</h3>
+    <div class="flex flex-col gap-9 pt-16 md:gap-12">
+        <h3 class="text-4xl font-bold md:text-5xl">
+            Beneficios de digitalizar tu negocio
+        </h3>
         <div class="flex flex-col gap-5">
             <!-- Visibility Card -->
             <div
@@ -64,7 +73,9 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
                             </defs>
                         </svg>
 
-                        <h4 class="text-2xl font-bold">+ Visibilidad</h4>
+                        <h4 class="text-2xl font-bold md:text-3xl">
+                            + Visibilidad
+                        </h4>
                     </div>
                     <p class="text-lg text-neutral/80">
                         Tu negocio visible las 24 horas, los 7 días de la
@@ -96,7 +107,9 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
                                 fill="black"></path>
                         </svg>
 
-                        <h4 class="text-2xl font-bold">+ Credibilidad</h4>
+                        <h4 class="text-2xl font-bold md:text-3xl">
+                            + Credibilidad
+                        </h4>
                     </div>
                     <p class="text-lg text-neutral/80">
                         En un mundo donde la interacción es clave, un sitio web
@@ -127,7 +140,9 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
                                 fill="black"></path>
                         </svg>
 
-                        <h4 class="text-2xl font-bold">+ Presencia</h4>
+                        <h4 class="text-2xl font-bold md:text-3xl">
+                            + Presencia
+                        </h4>
                     </div>
                     <p class="text-lg text-neutral/80">
                         Tu presencia digital es tu primera impresión. Un sitio
@@ -159,7 +174,9 @@ import webAdvantajesArrowMobile from '../../assets/arrows/arrow-whyaWeb-mobile.s
                                 fill="black"></path>
                         </svg>
 
-                        <h4 class="text-2xl font-bold">+ Competitividad</h4>
+                        <h4 class="text-2xl font-bold md:text-3xl">
+                            + Competitividad
+                        </h4>
                     </div>
                     <p class="text-lg text-neutral/80">
                         Destaca entre la multitud. En un mercado saturado, un

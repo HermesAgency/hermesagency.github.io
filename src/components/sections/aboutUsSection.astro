@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import aboutUsArrowMobile from '../../assets/arrows/arrow-aboutus-mobile.svg'
+import aboutUsArrowTablet from '../../assets/arrows/arrow-aboutus-tablet.svg'
 import aboutUsHeaderImg from '../../assets/about-us-header-image.webp'
 import inovationCardImg from '../../assets/inovation-card-image.webp'
 import designCardImg from '../../assets/design-card-image.webp'
@@ -8,19 +9,25 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
 ---
 
 <section
-    class="relative min-h-screen overflow-hidden rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 pb-40 pt-8 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20"
 >
     <Image
         src={aboutUsHeaderImg}
         alt="sobre nosotros imagen header"
-        class="absolute left-0 top-0 max-h-96 w-full rounded-b-3xl opacity-80"
+        class="absolute top-0 max-h-96 w-full rounded-b-3xl opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover"
     />
     <Image
         src={aboutUsArrowMobile}
         alt="Arrow for about us title"
-        class="absolute -right-6 top-96"
+        class="absolute -right-6 top-96 sm:hidden"
     />
-    <div class="mt-96 flex w-full flex-col gap-16">
+    <!-- arrow Only visible after sm -->
+    <Image
+        src={aboutUsArrowTablet}
+        alt="Arrow for about us title"
+        class="hidden sm:absolute sm:-left-0 sm:top-40 sm:block"
+    />
+    <div class="mt-96 flex w-full flex-col gap-16 sm:mt-24">
         <div class="flex flex-col gap-[18px]">
             <h2 class="text-[54px] font-bold text-neutral-content">
                 Sobre Nosotros
@@ -33,19 +40,21 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
             </p>
         </div>
         <div class="flex flex-col gap-12">
-            <h3 class="text-[45px] font-bold text-neutral-content">
+            <h3 class="text-[45px]/tight font-bold text-neutral-content">
                 En Hermes Nos Declaramos...
             </h3>
             <!-- Card Containers -->
             <div class="flex flex-col gap-9">
                 <!-- Inovation Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
                     <Image
                         src={inovationCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-top md:h-52 md:w-[308px]"
                     />
-                    <div class="flex w-full flex-col gap-[18px]">
+                    <div
+                        class="flex w-full flex-col gap-[18px] md:justify-center"
+                    >
                         <h3 class="text-4xl font-bold text-neutral-content">
                             Pioneros en inovacion
                         </h3>
@@ -60,13 +69,15 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 </div>
                 <!-- End Inovation Card -->
                 <!-- Design Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
                     <Image
                         src={designCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
                     />
-                    <div class="flex w-full flex-col gap-[18px]">
+                    <div
+                        class="flex w-full flex-col gap-[18px] md:justify-center"
+                    >
                         <h3 class="text-4xl font-bold text-neutral-content">
                             La fusion de Diseño y Estrategia
                         </h3>
@@ -81,13 +92,15 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 </div>
                 <!-- End Design Card -->
                 <!-- experience Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl">
+                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
                     <Image
                         src={experiencieCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl"
+                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
                     />
-                    <div class="flex w-full flex-col gap-[18px]">
+                    <div
+                        class="flex w-full flex-col gap-[18px] md:justify-center"
+                    >
                         <h3 class="text-4xl font-bold text-neutral-content">
                             Revolucionarios Digitales
                         </h3>
@@ -108,68 +121,123 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9"
             >
                 <!-- Metrics -->
-                <div class="flex justify-between">
-                    <!-- Performance Metric -->
-                    <div class="flex h-fit w-fit flex-col gap-3">
-                        <!-- Metric circle -->
-                        <div
-                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
-                        >
+                <div class="flex flex-col">
+                    <!-- Visible After sm breakpoint:  -->
+                    <div
+                        class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%]"
+                    >
+                        <div class="flex h-fit w-fit flex-col gap-3">
+                            <!--Accessibily Metric circle -->
                             <div
-                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
-                                100
+                                <div
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
+                                >
+                                    100
+                                </div>
                             </div>
+                            <!-- End metric circle -->
+                            <p
+                                class="text-center text-sm text-neutral-content/60 md:text-lg"
+                            >
+                                Accessibily
+                            </p>
                         </div>
-                        <!-- End metric circle -->
-                        <p class="text-center text-sm text-neutral-content/60">
-                            Performance
-                        </p>
-                    </div>
-                    <!-- End Performance Metric -->
-                    <!-- Best Practices Metric -->
-                    <div class="flex h-fit w-fit flex-col gap-3">
-                        <!-- Metric circle -->
-                        <div
-                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
-                        >
+                        <!-- End Accessibily Metric -->
+                        <div class="flex h-fit w-fit flex-col gap-3">
+                            <!--Design Metric circle -->
                             <div
-                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
-                                100
+                                <div
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
+                                >
+                                    100
+                                </div>
                             </div>
+                            <!-- End metric circle -->
+                            <p
+                                class="text-center text-sm text-neutral-content/60 md:text-lg"
+                            >
+                                Design
+                            </p>
                         </div>
-                        <!-- End metric circle -->
-                        <p class="text-center text-sm text-neutral-content/60">
-                            Best Practices
-                        </p>
+                        <!-- End Design Metric -->
                     </div>
-                    <!-- End Best Practices Metric -->
-                    <!-- Best SEO Metric -->
-                    <div class="flex h-fit w-fit flex-col gap-3">
-                        <!-- Metric circle -->
-                        <div
-                            class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30"
-                        >
+
+                    <!-- Visible until Mobile -->
+                    <div class="flex justify-between sm:relative md:-top-6">
+                        <!-- Performance Metric -->
+                        <div class="flex h-fit w-fit flex-col gap-3">
+                            <!-- Metric circle -->
                             <div
-                                class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content"
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
                             >
-                                100
+                                <div
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
+                                >
+                                    100
+                                </div>
                             </div>
+                            <!-- End metric circle -->
+                            <p
+                                class="text-center text-sm text-neutral-content/60 md:text-lg"
+                            >
+                                Performance
+                            </p>
                         </div>
-                        <!-- End metric circle -->
-                        <p class="text-center text-sm text-neutral-content/60">
-                            SEO
-                        </p>
+                        <!-- End Performance Metric -->
+                        <!-- Best Practices Metric -->
+                        <div class="flex h-fit w-fit flex-col gap-3">
+                            <!-- Metric circle -->
+                            <div
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
+                            >
+                                <div
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
+                                >
+                                    100
+                                </div>
+                            </div>
+                            <!-- End metric circle -->
+                            <p
+                                class="text-center text-sm text-neutral-content/60 md:text-lg"
+                            >
+                                Best Practices
+                            </p>
+                        </div>
+                        <!-- End Best Practices Metric -->
+                        <!-- Best SEO Metric -->
+                        <div class="flex h-fit w-fit flex-col gap-3">
+                            <!-- Metric circle -->
+                            <div
+                                class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
+                            >
+                                <div
+                                    class="flex items-center justify-center rounded-full bg-neutral px-4 py-[18px] text-2xl font-bold text-neutral-content sm:px-10 sm:py-[42px]"
+                                >
+                                    100
+                                </div>
+                            </div>
+                            <!-- End metric circle -->
+                            <p
+                                class="text-center text-sm text-neutral-content/60 md:text-lg"
+                            >
+                                SEO
+                            </p>
+                        </div>
+                        <!-- End SEO Metric -->
                     </div>
-                    <!-- End SEO Metric -->
                 </div>
                 <!-- End Metrics Container -->
                 <div class="flex w-full flex-col gap-6">
-                    <h3 class="text-4xl font-bold text-neutral-content">
+                    <h3
+                        class="text-4xl font-bold text-neutral-content md:text-5xl"
+                    >
                         Somos Perfeccionistas cuando de nuestra calidad se trata
                     </h3>
-                    <p class="text-[18px] text-neutral-content/80">
+                    <p class="text-balance text-[18px] text-neutral-content/80">
                         No se trata solo de que se vea bien, tiene que funcionar
                         perfectamente. En hermes utilizamos las ultimas
                         tecnologias del mercado y programamos utilizando altos

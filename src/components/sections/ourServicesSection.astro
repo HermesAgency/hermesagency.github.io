@@ -13,17 +13,19 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
     <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
         Nuestros Servicios
     </h2>
-    <div class="flex w-full flex-col gap-6 py-9">
+    <div
+        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 xl:grid-cols-3"
+    >
         <!-- Start Landing Page Card -->
         <div
-            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
         >
             <Image
                 src={landingPageImg}
                 alt="Landing Page Economica Imagen"
                 class="h-64 w-full rounded-t-3xl object-cover"
             />
-            <div class="flex flex-col gap-8 px-4 py-8">
+            <div class="flex h-full flex-col justify-start gap-6 px-4 py-8">
                 <h4 class="text-3xl font-bold text-neutral">Landing Page</h4>
                 <p class="text-lg text-neutral/80">
                     La primera impresión cuenta. Con nuestras Landing Pages
@@ -37,14 +39,14 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
             </div>
         </div>
         <div
-            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
         >
             <Image
                 src={onlineShopImg}
                 alt="Landing Page Economica Imagen"
                 class="h-64 w-full rounded-t-3xl object-cover"
             />
-            <div class="flex flex-col gap-8 px-4 py-8">
+            <div class="flex h-full flex-col justify-start gap-6 px-4 py-8">
                 <h4 class="text-3xl font-bold text-neutral">Tienda Virtual</h4>
                 <p class="text-lg text-neutral/80">
                     Vender en línea nunca fue tan fácil. Nuestras tiendas
@@ -60,14 +62,14 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         <!-- End Online Shop Card -->
         <!-- Start web app Card -->
         <div
-            class="overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50"
+            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row"
         >
             <Image
                 src={webAppImg}
                 alt="Aplicacion Web"
-                class="h-64 w-full rounded-t-3xl object-cover"
+                class="h-64 w-full rounded-t-3xl object-cover md:h-full md:w-1/3 md:object-contain md:object-left"
             />
-            <div class="flex flex-col gap-8 px-4 py-8">
+            <div class="flex h-full flex-col justify-start gap-6 px-4 py-8">
                 <h4 class="text-3xl font-bold text-neutral">Aplicación Web</h4>
                 <p class="text-lg text-neutral/80">
                     El ultimo nivel de interactividad y accesibilidad, creamos
