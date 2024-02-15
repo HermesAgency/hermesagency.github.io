@@ -17,7 +17,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
         <Image
             src={aboutUsHeaderImg}
             alt="sobre nosotros imagen header"
-            class="absolute top-0 max-h-72 w-full rounded-b-3xl object-cover opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover md:-right-64 md:max-h-80 lg:absolute lg:-right-96 lg:top-24 lg:max-h-[35rem] lg:w-4/5"
+            class="absolute top-0 max-h-72 w-full rounded-b-3xl object-cover opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover md:-right-64 md:max-h-80 lg:absolute lg:-right-96 lg:top-24 lg:max-h-[35rem] lg:w-4/5 xl:relative xl:-right-32 xl:top-0"
         />
         <Image
             src={aboutUsArrowMobile}
@@ -33,7 +33,9 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
         <div
             class="mt-72 flex flex-col gap-[18px] min-[425px]:mt-80 sm:mt-16 md:w-5/6 lg:mt-0 lg:w-[55%] lg:gap-2"
         >
-            <h2 class="text-[54px] font-bold text-neutral-content">
+            <h2
+                class="text-[54px] font-bold text-neutral-content xl:text-[64px]"
+            >
                 Sobre Nosotros
             </h2>
             <p class="text-lg text-neutral-content/80">
@@ -45,8 +47,10 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
         </div>
     </div>
     <div class="mt-32 flex w-full flex-col gap-16 sm:mt-24 lg:mt-32">
-        <div class="flex flex-col gap-12">
-            <h3 class="text-[45px]/tight font-bold text-neutral-content">
+        <div class="grid grid-cols-1 gap-12 xl:grid-cols-2">
+            <h3
+                class="text-[45px]/tight font-bold text-neutral-content xl:text-5xl"
+            >
                 En Hermes Nos Declaramos...
             </h3>
             <!-- Card Containers -->
@@ -124,10 +128,10 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
             <!-- End Cards Container -->
             <!-- Quality Section -->
             <div
-                class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9 lg:flex-row-reverse lg:items-center lg:gap-20"
+                class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9 lg:flex-row-reverse lg:items-center lg:gap-20 xl:col-span-2 xl:justify-between"
             >
                 <!-- Metrics -->
-                <div class="flex flex-col lg:flex-row lg:gap-4">
+                <div class="flex flex-col lg:flex-row lg:gap-4 xl:gap-8">
                     <!-- Visible After sm breakpoint:  -->
                     <div
                         class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%] lg:flex-col lg:justify-center lg:gap-8"
@@ -239,7 +243,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                     </div>
                 </div>
                 <!-- End Metrics Container -->
-                <div class="flex w-full flex-col gap-6">
+                <div class="flex w-full max-w-[627px] flex-col gap-6">
                     <h3
                         class="text-4xl font-bold text-neutral-content md:text-5xl"
                     >
