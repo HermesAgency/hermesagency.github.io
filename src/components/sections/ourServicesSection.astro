@@ -14,11 +14,11 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         Nuestros Servicios
     </h2>
     <div
-        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 xl:grid-cols-3"
+        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 min-[1115px]:grid-cols-3 min-[1115px]:gap-x-[18px]"
     >
         <!-- Start Landing Page Card -->
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={landingPageImg}
@@ -39,7 +39,7 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
             </div>
         </div>
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={onlineShopImg}
@@ -62,12 +62,12 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         <!-- End Online Shop Card -->
         <!-- Start web app Card -->
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row min-[1115px]:col-span-1 min-[1115px]:flex-col min-[1115px]:shadow-xl"
         >
             <Image
                 src={webAppImg}
                 alt="Aplicacion Web"
-                class="h-64 w-full rounded-t-3xl object-cover md:h-full md:w-1/3 md:object-contain md:object-left"
+                class="h-64 w-full rounded-t-3xl object-cover md:h-full md:w-1/3 md:object-contain md:object-left min-[1115px]:h-64 min-[1115px]:w-full min-[1115px]:object-cover"
             />
             <div class="flex h-full flex-col justify-start gap-6 px-4 py-8">
                 <h4 class="text-3xl font-bold text-neutral">Aplicación Web</h4>
