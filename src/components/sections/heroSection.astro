@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import heroArrowMobile from '../../assets/arrows/hero-arrow-mobile.svg'
+import heroArrowTablet from '../../assets/arrows/arrow-hero-laptop.svg'
 ---
 
 <!-- Start Hero Section -->
@@ -11,7 +12,12 @@ import heroArrowMobile from '../../assets/arrows/hero-arrow-mobile.svg'
     <Image
         src={heroArrowMobile}
         alt="flecha hero section mobile"
-        class="absolute -top-8 left-24 -rotate-12"
+        class="absolute -top-8 left-24 -rotate-12 md:hidden"
+    />
+    <Image
+        src={heroArrowTablet}
+        alt="flecha hero section mobile"
+        class="hidden -rotate-12 md:absolute md:-top-8 md:left-24 md:block md:rotate-[355deg]"
     />
     <div class="relative top-44 flex flex-col gap-5">
         <h1
