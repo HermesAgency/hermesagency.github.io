@@ -11,24 +11,28 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
 <section
     class="relative min-h-screen overflow-hidden rounded-2xl bg-gradient-to-br from-[#09090B] to-[#0C0A09] px-4 pb-40 pt-8 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20"
 >
-    <Image
-        src={aboutUsHeaderImg}
-        alt="sobre nosotros imagen header"
-        class="absolute top-0 max-h-96 w-full rounded-b-3xl opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover"
-    />
-    <Image
-        src={aboutUsArrowMobile}
-        alt="Arrow for about us title"
-        class="absolute -right-6 top-96 sm:hidden"
-    />
-    <!-- arrow Only visible after sm -->
-    <Image
-        src={aboutUsArrowTablet}
-        alt="Arrow for about us title"
-        class="hidden sm:absolute sm:-left-0 sm:top-40 sm:block"
-    />
-    <div class="mt-96 flex w-full flex-col gap-16 sm:mt-24">
-        <div class="flex flex-col gap-[18px]">
+    <div
+        class="flex w-full flex-col lg:h-[35rem] lg:flex-row-reverse lg:items-center lg:justify-end"
+    >
+        <Image
+            src={aboutUsHeaderImg}
+            alt="sobre nosotros imagen header"
+            class="absolute top-0 max-h-72 w-full rounded-b-3xl object-cover opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover md:-right-64 md:max-h-80 lg:absolute lg:-right-96 lg:top-24 lg:max-h-[35rem] lg:w-4/5"
+        />
+        <Image
+            src={aboutUsArrowMobile}
+            alt="Arrow for about us title"
+            class="absolute -right-2 top-72 rotate-6 sm:hidden"
+        />
+        <!-- arrow Only visible after sm -->
+        <Image
+            src={aboutUsArrowTablet}
+            alt="Arrow for about us title"
+            class="hidden sm:absolute sm:-left-8 sm:top-8 sm:block lg:hidden"
+        />
+        <div
+            class="mt-72 flex flex-col gap-[18px] min-[425px]:mt-80 sm:mt-16 md:w-5/6 lg:mt-0 lg:w-[55%] lg:gap-2"
+        >
             <h2 class="text-[54px] font-bold text-neutral-content">
                 Sobre Nosotros
             </h2>
@@ -39,6 +43,8 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 necesidades
             </p>
         </div>
+    </div>
+    <div class="mt-32 flex w-full flex-col gap-16 sm:mt-24 lg:mt-32">
         <div class="flex flex-col gap-12">
             <h3 class="text-[45px]/tight font-bold text-neutral-content">
                 En Hermes Nos Declaramos...
@@ -118,13 +124,13 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
             <!-- End Cards Container -->
             <!-- Quality Section -->
             <div
-                class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9"
+                class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9 lg:flex-row-reverse lg:items-center lg:gap-20"
             >
                 <!-- Metrics -->
-                <div class="flex flex-col">
+                <div class="flex flex-col lg:flex-row lg:gap-4">
                     <!-- Visible After sm breakpoint:  -->
                     <div
-                        class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%]"
+                        class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%] lg:flex-col lg:justify-center lg:gap-8"
                     >
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!--Accessibily Metric circle -->
@@ -167,7 +173,9 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                     </div>
 
                     <!-- Visible until Mobile -->
-                    <div class="flex justify-between sm:relative md:-top-6">
+                    <div
+                        class="flex justify-between sm:relative md:-top-6 lg:static lg:flex-col lg:gap-8"
+                    >
                         <!-- Performance Metric -->
                         <div class="flex h-fit w-fit flex-col gap-3">
                             <!-- Metric circle -->
