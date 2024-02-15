@@ -10,13 +10,13 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
     class="relative min-h-screen rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20 xl:px-20 xl:py-24"
 >
     <div
-        class="flex flex-col gap-10 md:gap-16 lg:relative lg:flex-row-reverse lg:justify-start lg:gap-0"
+        class="flex flex-col gap-10 md:gap-16 lg:relative lg:flex-row-reverse lg:justify-start lg:gap-0 xl:justify-between"
     >
         <div class="relative h-full w-full lg:w-fit">
             <Image
                 src={webAdvantajesImage}
                 alt="porque Tener una pagina Web? Imagen"
-                class="z-20 drop-shadow-2xl md:mx-auto md:aspect-square md:max-w-xl lg:relative lg:-right-12 lg:max-w-[411px]"
+                class="z-20 drop-shadow-2xl md:mx-auto md:aspect-square md:max-w-xl lg:relative lg:-right-12 lg:max-w-[411px] xl:right-0 xl:max-w-lg"
             />
             <Image
                 src={webAdvantajesArrowMobile}
@@ -30,7 +30,7 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
             />
         </div>
         <div
-            class="flex flex-col gap-4 lg:relative lg:max-w-[70%] lg:justify-end"
+            class="flex flex-col gap-4 lg:relative lg:max-w-[70%] lg:justify-end xl:max-w-[40rem] xl:justify-center"
         >
             <Image
                 src={webAdvantajesArrowTablet}
@@ -41,11 +41,11 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
                 Porque Necesitas una Pagina Web?
             </h2>
             <p class="text-lg text-neutral/80">
-                Cerra los ojos e imagina por un momento, que puedes sin tener
-                que hacer nada, trasmitirle a cientos y miles al mismo tiempo tu
-                vision de negocio, los productos o servicios que vendes, y la
-                posibilidad de contactarse con vos desde donde estes. Todo esto
-                es posible hoy gracias a una web.
+                Cierra los ojos e imagina por un momento, que sin tener que
+                hacer nada, puedes trasmitirle a cientos y miles al mismo tiempo
+                tu vision de negocio, los productos o servicios que vendes, y
+                brindarles la posibilidad de contactarse con vos desde donde
+                quiera que esten. Todo esto es posible hoy gracias a una web.
             </p>
         </div>
     </div>
@@ -53,17 +53,19 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
     <Image
         src={webAdvantajesArrowTablet}
         alt="arrow for whyAWeb"
-        class="hidden lg:relative lg:left-64 lg:top-20 lg:block"
+        class="hidden lg:relative lg:left-64 lg:top-20 lg:block xl:mb-4 xl:scale-125"
     />
     <!-- Benefits section -->
-    <div class="flex flex-col gap-9 pt-16 md:gap-12 lg:pt-24">
-        <h3 class="text-4xl font-bold md:text-5xl">
+    <div
+        class="grid grid-cols-1 gap-9 pt-16 md:gap-12 lg:pt-24 xl:grid-cols-[0.8fr_1.1fr_1.1fr]"
+    >
+        <h3 class="text-4xl font-bold md:text-5xl xl:col-span-1 xl:text-5xl">
             Beneficios de digitalizar tu negocio
         </h3>
-        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:col-span-2">
             <!-- Visibility Card -->
             <div
-                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/10 p-[1px] shadow-sm"
+                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl p-[1px] shadow-lg"
             >
                 <div
                     class="flex w-full flex-col gap-2 rounded-2xl bg-gradient-to-br from-neutral-content to-neutral-content/95 px-8 py-4"
@@ -105,7 +107,7 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
             <!-- End Visibility Card -->
             <!-- Credibility Card -->
             <div
-                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/10 p-[1px] shadow-sm"
+                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl p-[1px] shadow-lg"
             >
                 <div
                     class="flex w-full flex-col gap-2 rounded-2xl bg-gradient-to-br from-neutral-content to-neutral-content/95 px-8 py-4"
@@ -138,7 +140,7 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
             <!-- End Credibility Card -->
             <!-- Presence Card -->
             <div
-                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/10 p-[1px] shadow-sm"
+                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl p-[1px] shadow-lg"
             >
                 <div
                     class="flex w-full flex-col gap-2 rounded-2xl bg-gradient-to-br from-neutral-content to-neutral-content/95 px-8 py-4"
@@ -172,7 +174,7 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
             <!-- End Presence Card -->
             <!-- Competitiveness Card -->
             <div
-                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/10 p-[1px] shadow-sm"
+                class="w-full min-w-[344px] flex-col gap-2 rounded-2xl p-[1px] shadow-lg"
             >
                 <div
                     class="flex w-full flex-col gap-2 rounded-2xl bg-gradient-to-br from-neutral-content to-neutral-content/95 px-8 py-4"
