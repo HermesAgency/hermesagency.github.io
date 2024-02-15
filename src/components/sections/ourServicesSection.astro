@@ -7,18 +7,18 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
 ---
 
 <section
-    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20"
+    class="relative min-h-screen overflow-hidden rounded-2xl bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20 xl:px-20 xl:py-24"
 >
     <Image src={arrowImg} alt="arrow image" class="absolute" />
     <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
         Nuestros Servicios
     </h2>
     <div
-        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 xl:grid-cols-3"
+        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 min-[1115px]:grid-cols-3 min-[1115px]:gap-x-[18px]"
     >
         <!-- Start Landing Page Card -->
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={landingPageImg}
@@ -39,7 +39,7 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
             </div>
         </div>
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={onlineShopImg}
@@ -62,12 +62,12 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         <!-- End Online Shop Card -->
         <!-- Start web app Card -->
         <div
-            class="flex w-full min-w-[343px] flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row"
+            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row min-[1115px]:col-span-1 min-[1115px]:flex-col min-[1115px]:shadow-xl"
         >
             <Image
                 src={webAppImg}
                 alt="Aplicacion Web"
-                class="h-64 w-full rounded-t-3xl object-cover md:h-full md:w-1/3 md:object-contain md:object-left"
+                class="h-64 w-full rounded-t-3xl object-cover md:h-full md:w-1/3 md:object-contain md:object-left min-[1115px]:h-64 min-[1115px]:w-full min-[1115px]:object-cover"
             />
             <div class="flex h-full flex-col justify-start gap-6 px-4 py-8">
                 <h4 class="text-3xl font-bold text-neutral">Aplicación Web</h4>
@@ -84,10 +84,27 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         </div>
         <!-- End web app Card -->
     </div>
-    <div class="flex flex-col gap-9">
-        <h3 class="text-[45px] font-bold text-neutral">
-            Independiente a la opcion que elijas,todos nuestros planes incluyen:
-        </h3>
+    <div class="grid grid-cols-1 gap-9 xl:mt-20 xl:grid-cols-2">
+        <div class="xl:flex xl:flex-col xl:gap-6">
+            <h3 class="text-[45px] font-bold text-neutral xl:text-[48px]">
+                Independiente a la opcion que elijas,todos nuestros planes
+                incluyen:
+            </h3>
+            <div class="hidden xl:flex xl:w-full xl:flex-col xl:gap-6">
+                <p class="text-lg text-neutral" style="text-wrap: balance">
+                    ¿Tienes alguna duda?¿No sabes cual plan es ideal para vos?
+                    Reserva una charla de Asesoria completamente gratis ahora!
+                </p>
+                <div
+                    class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl lg:w-72"
+                >
+                    <button
+                        class="btn w-full rounded-3xl bg-neutral text-neutral-content"
+                        >Reservar Asesoria Gratis</button
+                    >
+                </div>
+            </div>
+        </div>
 
         <div class="flex flex-col gap-6">
             <!-- Included Item -->
@@ -285,13 +302,13 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
             </div>
             <!-- End Included Item -->
         </div>
-        <div class="flex w-full flex-col gap-6">
-            <p class="text-lg text-neutral">
+        <div class="flex w-full flex-col gap-6 lg:max-w-lg xl:hidden">
+            <p class="text-lg text-neutral" style="text-wrap: balance">
                 ¿Tienes alguna duda?¿No sabes cual plan es ideal para vos?
                 Reserva una charla de Asesoria completamente gratis ahora!
             </p>
             <div
-                class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
+                class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl lg:w-72"
             >
                 <button
                     class="btn w-full rounded-3xl bg-neutral text-neutral-content"
