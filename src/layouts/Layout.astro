@@ -3,7 +3,8 @@ import { GoogleFontsOptimizer } from 'astro-google-fonts-optimizer'
 interface Props {
     title: string
 }
-
+import { Image } from 'astro:assets'
+import HermesLogo from '../assets/Hermes_Logo_2024.svg'
 const { title } = Astro.props
 ---
 
@@ -26,16 +27,14 @@ const { title } = Astro.props
             <div class="drawer-content relative flex flex-col">
                 <!-- Navbar -->
                 <div
-                    class="navbar sticky left-0 top-0 z-30 w-full mix-blend-difference"
+                    class="navbar sticky left-0 top-0 z-30 w-full px-4 mix-blend-difference sm:px-8 lg:px-16 xl:px-20"
                 >
                     <!-- Navbar Icon -->
-                    <div
-                        class="z-20 mx-2 h-full flex-1 px-2 mix-blend-difference"
-                    >
-                        <img
-                            src="src/assets/Hermes_Logo_2024.svg"
-                            alt="Logo"
-                            class="aspect-video h-12"
+                    <div class="z-20 mx-2 h-full flex-1 mix-blend-difference">
+                        <Image
+                            src={HermesLogo}
+                            alt="Large Logo"
+                            class="h-12 w-fit"
                         />
                     </div>
                     <div
