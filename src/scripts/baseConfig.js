@@ -21,10 +21,6 @@ const mm = gsap.matchMedia()
 //Mobile Config
 mm.add('(max-width: 768px)', () => {
     // this setup code only runs when viewport is at least 768px wide
-    tl.from('svg#preloader', {
-        width: '309px',
-        height: '229px',
-    })
     tl.to('#text', {
         duration: 4,
         ease: 'none',
@@ -98,11 +94,68 @@ mm.add('(max-width: 768px)', () => {
 })
 //Desktop Config
 mm.add('(min-width: 768px)', () => {
-    // this setup code only runs when viewport is at least 768px wide
+    // this setup code only runs when viewport is bigger than 768px wide
+    tl.to('#text', {
+        duration: 4,
+        ease: 'none',
+        keyframes: {
+            '0%': {
+                opacity: 1,
+                fill: 'transparent',
+                stroke: '#000',
+                'stroke-width': 3,
+                'stroke-dashoffset': '25%',
+                'stroke-dasharray': '0 32%',
+            },
+            '50%': {
+                fill: 'transparent',
+                stroke: '#000',
+                'stroke-width': 3,
+            },
+            '70%, 100%': {
+                fill: '#000',
+                stroke: 'transparent',
+                'stroke-width': '0',
+                'stroke-dashoffset': '-25%',
+                'stroke-dasharray': '32% 0',
+            },
+        },
+    })
+
+    tl.to(
+        '#wing',
+        {
+            duration: 4,
+            ease: 'none',
+            keyframes: {
+                '0%': {
+                    opacity: 1,
+                    fill: 'transparent',
+                    stroke: '#000',
+                    'stroke-width': 3,
+                    'stroke-dashoffset': '25%',
+                    'stroke-dasharray': '0 32%',
+                },
+                '50%': {
+                    fill: 'transparent',
+                    stroke: '#000',
+                    'stroke-width': 3,
+                },
+                '70%, 100%': {
+                    fill: '#000',
+                    stroke: 'transparent',
+                    'stroke-width': '0',
+                    'stroke-dashoffset': '-25%',
+                    'stroke-dasharray': '32% 0',
+                },
+            },
+        },
+        '<'
+    )
     tl.to('#preloader', {
         delay: 2,
         scale: 90,
-        duration: 1.2,
+        duration: 0.8,
         translateX: '-100%',
     })
 
@@ -111,27 +164,3 @@ mm.add('(min-width: 768px)', () => {
         display: 'none',
     })
 })
-
-// tl.to(
-//   "#wing",
-//   {
-//     opacity: 0,
-//   },
-//   "<"
-// );
-// tl.to(
-//   "#wing",
-//   {
-//     opacity: 0,
-//   },
-//   "<"
-// );
-// tl.to(
-//   "#preloader",
-//   {
-//     fill: "#030104",
-//     duration: 0,
-//     delay: 0.2,
-//   },
-//   "<"
-// );
