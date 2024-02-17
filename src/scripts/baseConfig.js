@@ -14,12 +14,12 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0)
 
 // PRELOADER ANIMATION
-const tl = gsap.timeline()
+export const tl = gsap.timeline()
 
-const mm = gsap.matchMedia()
+export const mm = gsap.matchMedia()
 
 //Mobile Config
-mm.add('(max-width: 768px)', () => {
+mm.add('(max-width: 767px)', () => {
     // this setup code only runs when viewport is at least 768px wide
     //Preloader animation
     tl.to('#text', {
@@ -131,7 +131,8 @@ mm.add('(max-width: 768px)', () => {
         }
     )
 })
-//Desktop Config
+
+//after Tablet Config
 mm.add('(min-width: 768px)', () => {
     // this setup code only runs when viewport is bigger than 768px wide
     tl.to('#text', {
@@ -196,10 +197,48 @@ mm.add('(min-width: 768px)', () => {
         scale: 90,
         duration: 0.8,
         translateX: '-100%',
+        onComplete: () => {
+            lenis.scrollTo(0, { immediate: true })
+        },
     })
 
     tl.to('#loader-container', {
         opacity: 0,
         display: 'none',
     })
+
+    //Hero section Entry animation
+    tl.fromTo(
+        '#hero-arrow-tablet',
+        {
+            opacity: 0,
+            scale: 0.2,
+            'stroke-dashoffset': '25%',
+            // 'stroke-dasharray': '0 32%',
+            // 'stroke-width': 0,
+        },
+        {
+            opacity: 1,
+            scale: 1,
+            transformOrigin: 'top right',
+            duration: 0.8,
+            ease: 'power3.inOut',
+            // 'stroke-width': 3,
+            'stroke-dashoffset': '-25%',
+            // 'stroke-dasharray': '32% 0',
+        }
+    )
+
+    tl.fromTo(
+        '#hero-content',
+        {
+            opacity: 0,
+            y: '50%',
+        },
+        {
+            opacity: 1,
+            y: '0%',
+            stagger: 0.1,
+        }
+    )
 })
