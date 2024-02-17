@@ -1,6 +1,7 @@
 import Lenis from '@studio-freight/lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import { AnimationValues } from './animationValues'
 
 gsap.registerPlugin(ScrollTrigger)
 const lenis = new Lenis()
@@ -100,21 +101,19 @@ mm.add('(max-width: 767px)', () => {
     tl.fromTo(
         '#hero-arrow-mobile',
         {
-            opacity: 0,
-            scale: 0.2,
-            'stroke-dashoffset': '25%',
-            // 'stroke-dasharray': '0 32%',
-            // 'stroke-width': 0,
+            opacity: AnimationValues.heroArrow.from.opacity,
+            scale: AnimationValues.heroArrow.from.scale,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.from['stroke-dashoffset'],
         },
         {
-            opacity: 1,
-            scale: 1,
-            transformOrigin: 'top right',
-            duration: 0.8,
-            ease: 'power3.inOut',
-            // 'stroke-width': 3,
-            'stroke-dashoffset': '-25%',
-            // 'stroke-dasharray': '32% 0',
+            opacity: AnimationValues.heroArrow.to.opacity,
+            scale: AnimationValues.heroArrow.to.scale,
+            transformOrigin: AnimationValues.heroArrow.to.transformOrigin,
+            duration: AnimationValues.heroArrow.to.duration,
+            ease: AnimationValues.heroArrow.to.ease,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.to['stroke-dashoffset'],
         }
     )
 
@@ -211,21 +210,19 @@ mm.add('(min-width: 768px)', () => {
     tl.fromTo(
         '#hero-arrow-tablet',
         {
-            opacity: 0,
-            scale: 0.2,
-            'stroke-dashoffset': '25%',
-            // 'stroke-dasharray': '0 32%',
-            // 'stroke-width': 0,
+            opacity: AnimationValues.heroArrow.from.opacity,
+            scale: AnimationValues.heroArrow.from.scale,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.from['stroke-dashoffset'],
         },
         {
-            opacity: 1,
-            scale: 1,
-            transformOrigin: 'top right',
-            duration: 0.8,
-            ease: 'power3.inOut',
-            // 'stroke-width': 3,
-            'stroke-dashoffset': '-25%',
-            // 'stroke-dasharray': '32% 0',
+            opacity: AnimationValues.heroArrow.to.opacity,
+            scale: AnimationValues.heroArrow.to.scale,
+            transformOrigin: AnimationValues.heroArrow.to.transformOrigin,
+            duration: AnimationValues.heroArrow.to.duration,
+            ease: AnimationValues.heroArrow.to.ease,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.to['stroke-dashoffset'],
         }
     )
 
