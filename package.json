@@ -1,7 +1,7 @@
 {
   "name": "hermes-final-rebuild",
   "type": "module",
-  "version": "0.9.7",
+  "version": "0.9.7a",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
