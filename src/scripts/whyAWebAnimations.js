@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: whyAWebSection,
             start: 'top 80%',
-            markers: true,
         },
     })
     const whyAWebImage = document.querySelector(
@@ -24,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     wabTL.to(whyAWebSection, {
         backgroundColor: '#F1F5F9',
         ease: 'power3.inOut',
+        transformOrigin: 'bottom left',
         duration: 0.8,
         onStart: () => {
             // setTimeout(() => {
@@ -109,7 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
                     trigger: card,
                     start: 'top bottom',
-                    markers: true,
                 },
             }
         )
