@@ -27,13 +27,9 @@ mm.add('(max-width: 767px)', () => {
             cardImg,
             {
                 opacity: 0,
-                translateX: '50%',
-                translateY: '100%',
             },
             {
                 opacity: 1,
-                translateX: '0',
-                translateY: '0',
                 duration: 1,
             }
         )
