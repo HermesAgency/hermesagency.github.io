@@ -10,6 +10,7 @@ const aboutArrowMobile = document.querySelector('#about-us-arrow-mobile')
 const aboutSectionTitle = document.querySelector('#about-us-title')
 const aboutSectionText = document.querySelector('#about-us-text')
 
+//TODO: BUG IN SM BREAKPOINT ARROW DON'T BE ANIMATED
 mm.add('(max-width: 767px)', () => {
     //Function to add animation to card
     function addAnimationToCard(card) {
