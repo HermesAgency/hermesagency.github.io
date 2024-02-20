@@ -131,6 +131,9 @@ mm.add('(min-width: 768px)', () => {
     tl.to('#text', {
         duration: 4,
         ease: 'none',
+        onStart: () => {
+            window.addEventListener('scroll', noScroll)
+        },
         keyframes: {
             '0%': {
                 opacity: 1,
@@ -186,18 +189,12 @@ mm.add('(min-width: 768px)', () => {
         '<'
     )
     tl.to('#preloader', {
-        onStart: () => {
-            document.body.style.position = 'fixed'
-        },
         delay: 2,
         scale: 90,
         duration: 0.8,
         translateX: '-100%',
         onComplete: () => {
-            if (window.scrollY() !== 0) {
-                window.location.href = '#'
-                window.scroll(0, 0)
-            }
+            window.removeEventListener('scroll', noScroll)
         },
     })
 
