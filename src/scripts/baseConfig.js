@@ -1,29 +1,24 @@
-import Lenis from '@studio-freight/lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import { AnimationValues } from './animationValues'
 
 gsap.registerPlugin(ScrollTrigger)
-const lenis = new Lenis()
-
-lenis.on('scroll', ScrollTrigger.update)
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
-})
-
-gsap.ticker.lagSmoothing(0)
-
 // PRELOADER ANIMATION
 export const tl = gsap.timeline()
-
 export const mm = gsap.matchMedia()
 
+function noScroll() {
+    window.scroll(0, 0)
+}
 //Mobile Config
 mm.add('(max-width: 767px)', () => {
     // this setup code only runs when viewport is at least 768px wide
     //Preloader animation
     tl.to('#text', {
         duration: 4,
+        onStart: () => {
+            window.addEventListener('scroll', noScroll)
+        },
         ease: 'none',
         keyframes: {
             '0%': {
@@ -84,10 +79,10 @@ mm.add('(max-width: 767px)', () => {
         delay: 0.5,
         scale: 80,
         duration: 0.8,
-        ease: 'power4.inOut',
         translateX: '270%',
+        ease: 'power4.inOut',
         onComplete: () => {
-            lenis.scrollTo(0, { immediate: true })
+            window.removeEventListener('scroll', noScroll)
         },
     })
 
@@ -100,21 +95,19 @@ mm.add('(max-width: 767px)', () => {
     tl.fromTo(
         '#hero-arrow-mobile',
         {
-            opacity: 0,
-            scale: 0.2,
-            'stroke-dashoffset': '25%',
-            // 'stroke-dasharray': '0 32%',
-            // 'stroke-width': 0,
+            opacity: AnimationValues.heroArrow.from.opacity,
+            scale: AnimationValues.heroArrow.from.scale,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.from['stroke-dashoffset'],
         },
         {
-            opacity: 1,
-            scale: 1,
-            transformOrigin: 'top right',
-            duration: 0.8,
-            ease: 'power3.inOut',
-            // 'stroke-width': 3,
-            'stroke-dashoffset': '-25%',
-            // 'stroke-dasharray': '32% 0',
+            opacity: AnimationValues.heroArrow.to.opacity,
+            scale: AnimationValues.heroArrow.to.scale,
+            transformOrigin: AnimationValues.heroArrow.to.transformOrigin,
+            duration: AnimationValues.heroArrow.to.duration,
+            ease: AnimationValues.heroArrow.to.ease,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.to['stroke-dashoffset'],
         }
     )
 
@@ -193,12 +186,18 @@ mm.add('(min-width: 768px)', () => {
         '<'
     )
     tl.to('#preloader', {
+        onStart: () => {
+            document.body.style.position = 'fixed'
+        },
         delay: 2,
         scale: 90,
         duration: 0.8,
         translateX: '-100%',
         onComplete: () => {
-            lenis.scrollTo(0, { immediate: true })
+            if (window.scrollY() !== 0) {
+                window.location.href = '#'
+                window.scroll(0, 0)
+            }
         },
     })
 
@@ -211,21 +210,19 @@ mm.add('(min-width: 768px)', () => {
     tl.fromTo(
         '#hero-arrow-tablet',
         {
-            opacity: 0,
-            scale: 0.2,
-            'stroke-dashoffset': '25%',
-            // 'stroke-dasharray': '0 32%',
-            // 'stroke-width': 0,
+            opacity: AnimationValues.heroArrow.from.opacity,
+            scale: AnimationValues.heroArrow.from.scale,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.from['stroke-dashoffset'],
         },
         {
-            opacity: 1,
-            scale: 1,
-            transformOrigin: 'top right',
-            duration: 0.8,
-            ease: 'power3.inOut',
-            // 'stroke-width': 3,
-            'stroke-dashoffset': '-25%',
-            // 'stroke-dasharray': '32% 0',
+            opacity: AnimationValues.heroArrow.to.opacity,
+            scale: AnimationValues.heroArrow.to.scale,
+            transformOrigin: AnimationValues.heroArrow.to.transformOrigin,
+            duration: AnimationValues.heroArrow.to.duration,
+            ease: AnimationValues.heroArrow.to.ease,
+            'stroke-dashoffset':
+                AnimationValues.heroArrow.to['stroke-dashoffset'],
         }
     )
 

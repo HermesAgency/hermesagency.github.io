@@ -17,17 +17,20 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
     >
         <Image
             src={aboutUsHeaderImg}
+            id="about-us-image"
             alt="sobre nosotros imagen header"
             class="absolute top-0 max-h-72 w-full rounded-b-3xl object-cover opacity-80 max-sm:left-0 sm:relative sm:-right-48 sm:top-0 sm:w-4/5 sm:rounded-[48px] sm:object-cover md:-right-64 md:max-h-80 lg:absolute lg:-right-96 lg:top-24 lg:max-h-[35rem] lg:w-4/5 xl:relative xl:-right-32 xl:top-0"
         />
         <Image
             src={aboutUsArrowMobile}
+            id="about-us-arrow-mobile"
             alt="Arrow for about us title"
             class="absolute -right-2 top-72 rotate-6 sm:hidden"
         />
         <!-- arrow Only visible after sm -->
         <Image
             src={aboutUsArrowTablet}
+            id="about-us-arrow-tablet"
             alt="Arrow for about us title"
             class="hidden sm:absolute sm:-left-8 sm:top-8 sm:block lg:left-[-1rem] lg:top-[-5rem] lg:rotate-[341deg]"
         />
@@ -35,11 +38,12 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
             class="mt-72 flex flex-col gap-[18px] min-[425px]:mt-80 sm:mt-16 md:w-5/6 lg:mt-0 lg:w-[55%] lg:gap-2"
         >
             <h2
+                id="about-us-title"
                 class="text-[54px] font-bold text-neutral-content xl:text-[64px]"
             >
                 Sobre Nosotros
             </h2>
-            <p class="text-lg text-neutral-content/80">
+            <p id="about-us-text" class="text-lg text-neutral-content/80">
                 Somos una agencia Web con una meta clara: darte la posibilidad
                 de destacar en un mercado saturado de paginas web aburridas y
                 genericas con un diseño exclusivo y personalizado adaptado a tus
@@ -57,19 +61,25 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
             <!-- Card Containers -->
             <div class="flex flex-col gap-9">
                 <!-- Inovation Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
+                <div
+                    class="about__card flex w-full flex-col gap-6 rounded-3xl md:flex-row"
+                >
                     <Image
                         src={inovationCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-top md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-top md:h-52 md:w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
                     >
-                        <h3 class="text-4xl font-bold text-neutral-content">
+                        <h3
+                            class="about__card__title text-4xl font-bold text-neutral-content"
+                        >
                             Pioneros en inovacion
                         </h3>
-                        <p class="text-lg text-neutral-content/80">
+                        <p
+                            class="about__card__text text-lg text-neutral-content/80"
+                        >
                             En un mundo cada vez mas digital y en constante
                             evolucion, ya es hora de que los negocios locales
                             tambien puedan disfrutar de los beneficios de la
@@ -80,19 +90,25 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 </div>
                 <!-- End Inovation Card -->
                 <!-- Design Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
+                <div
+                    class="about__card flex w-full flex-col gap-6 rounded-3xl md:flex-row"
+                >
                     <Image
                         src={designCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
                     >
-                        <h3 class="text-4xl font-bold text-neutral-content">
+                        <h3
+                            class="about__card__title text-4xl font-bold text-neutral-content"
+                        >
                             La fusion de Diseño y Estrategia
                         </h3>
-                        <p class="text-lg text-neutral-content/80">
+                        <p
+                            class="about__card__text text-lg text-neutral-content/80"
+                        >
                             No basta con que se vea bonito, tiene que cumplir
                             una funcion. En hermes analizamos estrategicamente
                             cada elemento de nuestros diseños para que cumplan
@@ -103,19 +119,25 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 </div>
                 <!-- End Design Card -->
                 <!-- experience Card -->
-                <div class="flex w-full flex-col gap-6 rounded-3xl md:flex-row">
+                <div
+                    class="about__card flex w-full flex-col gap-6 rounded-3xl md:flex-row"
+                >
                     <Image
                         src={experiencieCardImg}
                         alt="Pioneros en Inovacion"
-                        class="aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
                     >
-                        <h3 class="text-4xl font-bold text-neutral-content">
+                        <h3
+                            class="about__card__title text-4xl font-bold text-neutral-content"
+                        >
                             Revolucionarios Digitales
                         </h3>
-                        <p class="text-lg text-neutral-content/80">
+                        <p
+                            class="about__card__text text-lg text-neutral-content/80"
+                        >
                             En un mundo cada vez mas digital y en constante
                             evolucion, ya es hora de que los negocios locales
                             tambien puedan disfrutar de los beneficios de la
@@ -132,12 +154,17 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 class="mt-16 flex h-[80vh] w-full flex-col justify-center gap-9 lg:flex-row-reverse lg:items-center lg:gap-20 xl:col-span-2 xl:justify-between"
             >
                 <!-- Metrics -->
-                <div class="flex flex-col lg:flex-row lg:gap-4 xl:gap-8">
+                <div
+                    id="metrics__container"
+                    class="flex flex-col gap-2 lg:flex-row lg:gap-4 xl:gap-8"
+                >
                     <!-- Visible After sm breakpoint:  -->
                     <div
-                        class="flex justify-around sm:justify-center sm:gap-[15%] md:gap-[20%] lg:flex-col lg:justify-center lg:gap-8"
+                        class="flex h-[118px] justify-around sm:h-[136px] sm:justify-center sm:gap-[15%] md:gap-[20%] lg:flex-col lg:justify-center lg:gap-8"
                     >
-                        <div class="flex h-fit w-fit flex-col gap-3">
+                        <div
+                            class="metric__circle flex h-fit w-fit flex-col gap-3"
+                        >
                             <!--Accessibily Metric circle -->
                             <div
                                 class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
@@ -156,7 +183,9 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                             </p>
                         </div>
                         <!-- End Accessibily Metric -->
-                        <div class="flex h-fit w-fit flex-col gap-3">
+                        <div
+                            class="metric__circle flex h-fit w-fit flex-col gap-3"
+                        >
                             <!--Design Metric circle -->
                             <div
                                 class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
@@ -179,10 +208,12 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
 
                     <!-- Visible until Mobile -->
                     <div
-                        class="flex justify-between sm:relative md:-top-6 lg:static lg:flex-col lg:gap-8"
+                        class="flex h-[118px] justify-between sm:relative sm:h-[136px] md:-top-6 lg:static lg:flex-col lg:gap-8"
                     >
                         <!-- Performance Metric -->
-                        <div class="flex h-fit w-fit flex-col gap-3">
+                        <div
+                            class="metric__circle flex h-fit w-fit flex-col gap-3"
+                        >
                             <!-- Metric circle -->
                             <div
                                 class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
@@ -202,7 +233,9 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                         </div>
                         <!-- End Performance Metric -->
                         <!-- Best Practices Metric -->
-                        <div class="flex h-fit w-fit flex-col gap-3">
+                        <div
+                            class="metric__circle flex h-fit w-fit flex-col gap-3"
+                        >
                             <!-- Metric circle -->
                             <div
                                 class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
@@ -222,7 +255,9 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                         </div>
                         <!-- End Best Practices Metric -->
                         <!-- Best SEO Metric -->
-                        <div class="flex h-fit w-fit flex-col gap-3">
+                        <div
+                            class="metric__circle flex h-fit w-fit flex-col gap-3"
+                        >
                             <!-- Metric circle -->
                             <div
                                 class="flex h-[86px] w-[87px] items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-900/30 sm:h-[136px] sm:w-[140px]"
@@ -246,11 +281,13 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 <!-- End Metrics Container -->
                 <div class="flex w-full max-w-[627px] flex-col gap-6">
                     <h3
-                        class="text-4xl font-bold text-neutral-content md:text-5xl"
+                        class="metric__title text-4xl font-bold text-neutral-content md:text-5xl"
                     >
                         Somos Perfeccionistas cuando de nuestra calidad se trata
                     </h3>
-                    <p class="text-balance text-[18px] text-neutral-content/80">
+                    <p
+                        class="metric__text text-balance text-[18px] text-neutral-content/80"
+                    >
                         No se trata solo de que se vea bien, tiene que funcionar
                         perfectamente. En hermes utilizamos las ultimas
                         tecnologias del mercado y programamos utilizando altos
