@@ -230,7 +230,7 @@
             const Finalmessage = validation.data.messageInput
                 ? validation.data.messageInput
                 : `Hola, te habla ${validation.data.nameInput}, me comunicaba para averiguar por una ${validation.data.serviceTypeInput}. Mi numero de contacto es: ${validation.data.telInput} ${validation.data.emailInput ? `y mi email es: ${validation.data.emailInput}` : ''}. `
-            console.log(Finalmessage)
+            window.location.href = `https://api.whatsapp.com/send?phone=543447402668&text=${Finalmessage}`
         } else {
             const errors = validation.error.errors
             errors.forEach((err) => {
