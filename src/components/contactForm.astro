@@ -7,18 +7,20 @@
     class="form__container rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
 >
     <form
-        action=""
         id="contactForm"
         class="flex flex-col gap-6 rounded-3xl bg-neutral px-[18px] py-9"
     >
         <!-- Name Input -->
         <label class="form-control w-full">
             <div class="label">
-                <span class="label-text text-neutral-content">Nombre:</span>
+                <span class="label-text text-neutral-content"
+                    >Nombre / Empresa:</span
+                >
             </div>
             <input
                 type="text"
-                placeholder="Ejemplo: Carlos Espinoza"
+                placeholder="Ejemplo: Carlos Espinoza o Alojamiento 'La flor'"
+                id="nameInput"
                 class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:translate-y-full placeholder:text-sm placeholder:text-neutral-content placeholder:opacity-0 placeholder:transition-[opacity,transform] focus:placeholder:-translate-y-1/3 focus:placeholder:opacity-40 focus-visible:border-b-[2px] focus-visible:border-amber-200"
             />
         </label>
@@ -32,6 +34,7 @@
             </div>
             <input
                 type="text"
+                id="emailInput"
                 placeholder="Ejemplo: carlosespinoza@gmail.com"
                 class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:translate-y-full placeholder:text-sm placeholder:text-neutral-content placeholder:opacity-0 placeholder:transition-[opacity,transform] focus:placeholder:-translate-y-1/3 focus:placeholder:opacity-40 focus-visible:border-b-[2px] focus-visible:border-amber-200"
             />
@@ -44,6 +47,7 @@
             </div>
             <input
                 type="text"
+                id="telInput"
                 placeholder="Ejemplo: 3447 123456"
                 class="input w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:translate-y-full placeholder:text-sm placeholder:text-neutral-content placeholder:opacity-0 placeholder:transition-[opacity,transform] focus:placeholder:-translate-y-1/3 focus:placeholder:opacity-40 focus-visible:border-b-[2px] focus-visible:border-amber-200"
             />
@@ -57,6 +61,7 @@
                 >
             </div>
             <textarea
+                id="messageInput"
                 placeholder="Ejemplo: Me comunico por una Landing Page para mi negocio..."
                 class="textarea-ghost w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 placeholder:translate-y-full placeholder:text-sm placeholder:text-neutral-content placeholder:opacity-0 placeholder:transition-[opacity,transform] focus:text-neutral-content focus:placeholder:opacity-40 focus:empty:placeholder:-translate-y-1/4 focus-visible:border-b-[2px] focus-visible:border-amber-200"
             ></textarea>
@@ -66,13 +71,16 @@
         <label class="form-control w-full">
             <div class="label">
                 <span class="label-text text-neutral-content"
-                    >What is your name?</span
+                    >Servicio Requerido:</span
                 >
             </div>
             <select
+                required
+                id="serviceTypeInput"
                 class="select select-ghost w-full border-x-0 border-b border-t-0 border-orange-300 bg-neutral px-2 py-3 text-neutral-content transition-colors duration-300 focus-visible:border-b-[2px] focus-visible:border-amber-200 focus-visible:text-neutral-content"
             >
                 <option disabled selected>Tipo De Pagina</option>
+                <option class="text-neutral-content">Asesoria Gratuita</option>
                 <option class="text-neutral-content">Landing Page</option>
                 <option class="text-neutral-content">Tienda Virtual</option>
                 <option class="text-neutral-content"
@@ -152,13 +160,76 @@
 </div>
 <!-- End Form -->
 <script>
+    import { z } from 'zod'
+
+    const FormSchema = z.object({
+        nameInput: z
+            .string({
+                required_error: 'El Nombre suyo o de su negocio es requerido',
+                invalid_type_error:
+                    'El Nombre suyo o de su negocio es requerido',
+            })
+            .min(1, 'El nombre es requerido')
+            .nullable(),
+        emailInput: z
+            .string({
+                required_error: 'El Nombre suyo o de su negocio es requerido',
+                invalid_type_error:
+                    'El Nombre suyo o de su negocio es requerido',
+            })
+            .email('Correo electrónico no válido')
+            .optional(),
+        telInput: z
+            .string({
+                required_error: 'El Nombre suyo o de su negocio es requerido',
+                invalid_type_error:
+                    'El Nombre suyo o de su negocio es requerido',
+            })
+            .min(1, 'El número de teléfono es requerido')
+            .nullable(),
+        messageInput: z
+            .string({
+                required_error: 'El Nombre suyo o de su negocio es requerido',
+                invalid_type_error:
+                    'El Nombre suyo o de su negocio es requerido',
+            })
+            .optional(),
+        serviceTypeInput: z
+            .string({
+                required_error: 'El Nombre suyo o de su negocio es requerido',
+                invalid_type_error:
+                    'El Nombre suyo o de su negocio es requerido',
+            })
+            .min(1, 'El servicio es requerido')
+            .nullable(),
+    })
+
     const formulario = document.getElementById('contactForm')
-    function sendWhatsapp() {
-        window.location.href =
-            'https://api.whatsapp.com/send?phone=543447402668&text={message}.'
+    const userName = document.getElementById('nameInput')
+    const userEmail = document.getElementById('emailInput')
+    const userTel = document.getElementById('telInput')
+    const message = document.getElementById('messageInput')
+    const serviceType = document.getElementById('serviceTypeInput')
+    function validateAndSendWhatsapp() {
+        const formValues = {
+            name: userName.value ?? ' ',
+            email: userEmail.value ?? ' ',
+            tel: userTel.value ?? ' ',
+            msg: message.value ?? ' ',
+            service: serviceType.value,
+        }
+        //form validation
+        const validation = FormSchema.safeParse(formValues)
+        if (validation.success) {
+            console.log('validacion exitosa')
+        } else {
+            console.log(validation.error.errors)
+        }
+
+        // window.location.href = 'link'
     }
     formulario.addEventListener('submit', (ev) => {
         ev.preventDefault()
-        sendWhatsapp()
+        validateAndSendWhatsapp()
     })
 </script>
