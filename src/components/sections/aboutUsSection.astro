@@ -54,7 +54,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
     <div class="mt-32 flex w-full flex-col gap-16 sm:mt-24 lg:mt-32">
         <div class="grid grid-cols-1 gap-12 xl:grid-cols-[0.9fr_1.1fr]">
             <h3
-                class="text-[45px]/tight font-bold text-neutral-content xl:text-5xl"
+                class="about__second__title text-[45px]/tight font-bold text-neutral-content xl:text-5xl"
             >
                 En Hermes Nos Declaramos...
             </h3>
@@ -67,7 +67,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                     <Image
                         src={inovationCardImg}
                         alt="Pioneros en Inovacion"
-                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-top md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-top md:h-52 md:w-fit md:max-w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
@@ -96,7 +96,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                     <Image
                         src={designCardImg}
                         alt="Pioneros en Inovacion"
-                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-fit md:max-w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
@@ -125,7 +125,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                     <Image
                         src={experiencieCardImg}
                         alt="Pioneros en Inovacion"
-                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-[308px]"
+                        class="about__card__image aspect-square h-80 w-full rounded-2xl shadow-xl sm:object-cover sm:object-center md:h-52 md:w-fit md:max-w-[308px]"
                     />
                     <div
                         class="flex w-full flex-col gap-[18px] md:justify-center"
@@ -156,11 +156,11 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
                 <!-- Metrics -->
                 <div
                     id="metrics__container"
-                    class="flex flex-col gap-2 lg:flex-row lg:gap-4 xl:gap-8"
+                    class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4 xl:gap-8"
                 >
                     <!-- Visible After sm breakpoint:  -->
                     <div
-                        class="flex h-[118px] justify-around sm:h-[136px] sm:justify-center sm:gap-[15%] md:gap-[20%] lg:flex-col lg:justify-center lg:gap-8"
+                        class="flex h-[118px] justify-around sm:h-[136px] sm:justify-center sm:gap-[15%] md:h-[176px] md:gap-[20%] lg:h-full lg:flex-col lg:justify-center lg:gap-8"
                     >
                         <div
                             class="metric__circle flex h-fit w-fit flex-col gap-3"
@@ -208,7 +208,7 @@ import experiencieCardImg from '../../assets/experience-card-image-mobile.webp'
 
                     <!-- Visible until Mobile -->
                     <div
-                        class="flex h-[118px] justify-between sm:relative sm:h-[136px] md:-top-6 lg:static lg:flex-col lg:gap-8"
+                        class="flex h-[118px] justify-between sm:relative sm:h-[136px] md:-top-6 md:h-[176px] lg:static lg:h-full lg:flex-col lg:gap-8"
                     >
                         <!-- Performance Metric -->
                         <div
