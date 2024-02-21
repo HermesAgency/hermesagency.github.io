@@ -19,74 +19,76 @@ window.addEventListener('DOMContentLoaded', () => {
     )
     const wabArrowMobile = document.querySelector('#web-adv-arrow-mobile')
     const wabArrowTablet = document.querySelector('#web-adv-arrow-tablet')
+    const wabArrowLarge = document.querySelector('#web-adv-arrow-large')
     const wabTitle = document.querySelector('#why-a-web-title')
     const wabText = document.querySelector('#why-a-web-text')
     wabTL.to(whyAWebSection, {
         backgroundColor: '#F1F5F9',
-        ease: 'power3.inOut',
+        ease: 'power4.in',
         transformOrigin: 'bottom left',
-        duration: 0.8,
-    }),
-        mm.add('(max-width: 767px)', () => {
-            //Image Entry
-            wabTL.fromTo(
-                whyAWebImage,
-                {
-                    translateY: '30%',
-                    opacity: 0,
-                },
-                {
-                    translateY: '0',
-                    opacity: 1,
-                    duration: 0.5,
-                    ease: 'power4.out',
-                }
-            )
-            //Arrow Entry
-            wabTL.fromTo(
-                wabArrowMobile,
-                {
-                    opacity: 0,
-                    scale: 0.2,
-                    'stroke-dashoffset': '25%',
-                },
-                {
-                    opacity: 1,
-                    scale: 1,
-                    transformOrigin: 'top right',
-                    duration: 0.5,
-                    ease: 'power3.inOut',
-                    'stroke-dashoffset': '-25%',
-                }
-            )
-            //Title Entry
-            wabTL.fromTo(
-                wabTitle,
-                {
-                    opacity: 0,
-                    translateY: '30%',
-                },
-                {
-                    opacity: 1,
-                    translateY: '0',
-                    duration: 0.5,
-                    ease: 'power3.inOut',
-                }
-            )
-            //text Entry
-            wabTL.fromTo(
-                wabText,
-                {
-                    opacity: 0,
-                },
-                {
-                    opacity: 1,
-                    duration: 0.5,
-                }
-            )
-        })
-    //after md breakpoint Animations
-    mm.add('(min-width: 768px)', () => {
+        duration: 0.5,
+    })
+    //Mobile breakpoint
+    mm.add('(max-width: 767px)', () => {
+        //Image Entry
+        wabTL.fromTo(
+            whyAWebImage,
+            {
+                translateY: '30%',
+                opacity: 0,
+            },
+            {
+                translateY: '0',
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power4.out',
+            }
+        )
+        //Arrow Entry
+        wabTL.fromTo(
+            wabArrowMobile,
+            {
+                opacity: 0,
+                scale: 0.2,
+                'stroke-dashoffset': '25%',
+            },
+            {
+                opacity: 1,
+                scale: 1,
+                transformOrigin: 'top right',
+                duration: 0.5,
+                ease: 'power3.inOut',
+                'stroke-dashoffset': '-25%',
+            }
+        )
+        //Title Entry
+        wabTL.fromTo(
+            wabTitle,
+            {
+                opacity: 0,
+                translateY: '30%',
+            },
+            {
+                opacity: 1,
+                translateY: '0',
+                duration: 0.5,
+                ease: 'power3.inOut',
+            }
+        )
+        //text Entry
+        wabTL.fromTo(
+            wabText,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 0.5,
+            }
+        )
+    })
+    //after md until lg breakpoint Animations
+    mm.add('(min-width: 768px) and (max-width: 1023px)', () => {
         //Image Entry
         wabTL.fromTo(
             whyAWebImage,
@@ -144,6 +146,66 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         )
     })
+    //after lg breakpoint
+    mm.add('(min-width: 1024px)', () => {
+        //Image Entry
+        wabTL.fromTo(
+            whyAWebImage,
+            {
+                translateX: '30%',
+                opacity: 0,
+            },
+            {
+                translateX: '0',
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power4.out',
+            }
+        )
+        //Arrow Entry
+        wabTL.fromTo(
+            wabArrowLarge,
+            {
+                opacity: 0,
+                scale: 0.2,
+                'stroke-dashoffset': '25%',
+            },
+            {
+                opacity: 1,
+                scale: 1,
+                transformOrigin: 'top right',
+                duration: 0.5,
+                ease: 'power3.inOut',
+                'stroke-dashoffset': '-25%',
+            }
+        )
+        //Title Entry
+        wabTL.fromTo(
+            wabTitle,
+            {
+                opacity: 0,
+                translateX: '30%',
+            },
+            {
+                opacity: 1,
+                translateX: '0',
+                duration: 0.5,
+                ease: 'power3.inOut',
+            }
+        )
+        //text Entry
+        wabTL.fromTo(
+            wabText,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 0.5,
+            }
+        )
+    })
+
     //Add animation to cards
     const featureCards = gsap.utils.toArray('.feature-card')
     featureCards.forEach((card) => {
