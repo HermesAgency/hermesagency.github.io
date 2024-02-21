@@ -50,7 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 0,
                 scale: 0.2,
-                'stroke-dashoffset': '25%',
             },
             {
                 opacity: 1,
@@ -58,7 +57,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 transformOrigin: 'top right',
                 duration: 0.5,
                 ease: 'power3.inOut',
-                'stroke-dashoffset': '-25%',
             }
         )
         //Title Entry
@@ -109,7 +107,6 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 0,
                 scale: 0.2,
-                'stroke-dashoffset': '25%',
             },
             {
                 opacity: 1,
@@ -117,7 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 transformOrigin: 'top left',
                 duration: 0.5,
                 ease: 'power3.inOut',
-                'stroke-dashoffset': '-25%',
             }
         )
         //Title Entry
@@ -168,15 +164,13 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 0,
                 scale: 0.2,
-                'stroke-dashoffset': '25%',
             },
             {
                 opacity: 1,
                 scale: 1,
-                transformOrigin: 'top right',
+                transformOrigin: 'top',
                 duration: 0.5,
                 ease: 'power3.inOut',
-                'stroke-dashoffset': '-25%',
             }
         )
         //Title Entry
@@ -184,7 +178,7 @@ window.addEventListener('DOMContentLoaded', () => {
             wabTitle,
             {
                 opacity: 0,
-                translateX: '30%',
+                translateX: '-30%',
             },
             {
                 opacity: 1,
@@ -202,6 +196,39 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 1,
                 duration: 0.5,
+            }
+        )
+
+        const benefitsArrow = document.querySelector('#about-benefits-arrow')
+        const benefitsTitle = document.querySelector('#benefits__title')
+        const benefitsTL = gsap.timeline({
+            scrollTrigger: {
+                trigger: benefitsArrow,
+                top: 'top 60%',
+                markers: true,
+            },
+        })
+        benefitsTL.fromTo(
+            benefitsArrow,
+            {
+                opacity: 0,
+                scale: 0.2,
+            },
+            {
+                opacity: 1,
+                scale: 1,
+                transformOrigin: 'top right',
+                duration: 0.5,
+                ease: 'power3.inOut',
+            }
+        )
+        benefitsTL.fromTo(
+            benefitsTitle,
+            {
+                opacity: 0.1,
+            },
+            {
+                opacity: 1,
             }
         )
     })
