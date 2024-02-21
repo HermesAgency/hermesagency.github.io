@@ -211,7 +211,7 @@ const { title } = Astro.props
                 menuToggleCheckbox.checked = false
             }
             sideBarMenuLinks.forEach((link) => {
-                if (window.innerWidth < 768) {
+                if (window.innerWidth < 1023) {
                     link.addEventListener('click', () =>
                         setTimeout(() => closeMenuOnLinkClick(), 100)
                     )
