@@ -205,7 +205,6 @@ window.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: benefitsArrow,
                 top: 'top 60%',
-                markers: true,
             },
         })
         benefitsTL.fromTo(
