@@ -10,11 +10,13 @@ import ArrowImgLarge from '../../assets/arrows/arrow-contact-laptop.svg'
 >
     <Image
         src={ArrowImgMobile}
+        id="mobile-contact-arrow"
         alt="arrow image mobile"
         class="absolute right-12 lg:hidden"
     />
     <Image
         src={ArrowImgLarge}
+        id="large-contact-arrow"
         alt="arrow image large"
         class="absolute left-36 top-0 hidden lg:block"
     />
@@ -22,6 +24,7 @@ import ArrowImgLarge from '../../assets/arrows/arrow-contact-laptop.svg'
     <div class="mt-44 grid grid-cols-1 gap-9 lg:mt-24 lg:grid-cols-2">
         <div class="lg:flex lg:flex-col lg:justify-start lg:gap-6 lg:pt-12">
             <h2
+                id="contact-section-title"
                 class="bg-gradient-to-br from-white to-white/50 bg-clip-text text-[54px]/tight font-bold text-transparent"
             >
                 Contactanos y Dale a tu negocio el espacio digital que se
@@ -94,10 +97,11 @@ import ArrowImgLarge from '../../assets/arrows/arrow-contact-laptop.svg'
 
         <!-- Start Form -->
         <div
-            class="rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
+            class="form__container rounded-3xl bg-gradient-to-br from-[#FDE68A] to-[#FDE68A]/15 p-[1px] shadow-xl"
         >
             <form
                 action=""
+                id="contactForm"
                 class="flex flex-col gap-6 rounded-3xl bg-neutral px-[18px] py-9"
             >
                 <!-- Name Input -->
@@ -250,7 +254,10 @@ import ArrowImgLarge from '../../assets/arrows/arrow-contact-laptop.svg'
         </div>
         <!-- End Form -->
         <!-- Start Contact Info -->
-        <div class="flex flex-col gap-6 lg:hidden">
+        <div
+            id="contact-section-contact-info"
+            class="flex flex-col gap-6 lg:hidden"
+        >
             <div class="flex flex-col gap-2">
                 <h4 class="text-4xl font-bold text-neutral-content/40">
                     Info de Contacto

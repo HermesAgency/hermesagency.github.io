@@ -8,18 +8,23 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
 
 <section
     id="servicios"
-    class="relative min-h-screen overflow-hidden rounded-[32px] bg-[radial-gradient(88.82%_174.7%_at_11.18%_10.48%,_#F1F5F9_0%,_#FFEDD5_100%)] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20 xl:px-20 xl:py-24"
+    class="relative min-h-screen overflow-hidden rounded-[32px] px-4 py-8 pb-40 sm:px-8 sm:py-16 lg:px-16 lg:py-20 xl:px-20 xl:py-24"
 >
-    <Image src={arrowImg} alt="arrow image" class="absolute" />
-    <h2 class="mt-44 text-[54px]/tight font-bold text-neutral">
+    <Image
+        src={arrowImg}
+        id="ServicesEntryArrow"
+        alt="arrow image"
+        class="absolute"
+    />
+    <h2 class="services__title mt-44 text-[54px]/tight font-bold text-neutral">
         Nuestros Servicios
     </h2>
     <div
-        class="grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 min-[1115px]:grid-cols-3 min-[1115px]:gap-x-[18px]"
+        class="cards__container grid w-full grid-cols-1 gap-6 py-9 md:grid-cols-2 min-[1115px]:grid-cols-3 min-[1115px]:gap-x-[18px]"
     >
         <!-- Start Landing Page Card -->
         <div
-            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
+            class="service__card flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 shadow-md md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={landingPageImg}
@@ -40,7 +45,7 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
             </div>
         </div>
         <div
-            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:max-w-md min-[1115px]:shadow-xl"
+            class="service__card flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 shadow-md md:max-w-md min-[1115px]:shadow-xl"
         >
             <Image
                 src={onlineShopImg}
@@ -63,7 +68,7 @@ import webAppImg from '../../assets/experiencia-digital-diseño-web.webp'
         <!-- End Online Shop Card -->
         <!-- Start web app Card -->
         <div
-            class="flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 md:col-span-2 md:flex md:flex-row min-[1115px]:col-span-1 min-[1115px]:flex-col min-[1115px]:shadow-xl"
+            class="service__card flex w-full flex-col justify-between overflow-clip rounded-3xl bg-gradient-to-br from-white to-amber-50 shadow-md md:col-span-2 md:flex md:flex-row min-[1115px]:col-span-1 min-[1115px]:flex-col min-[1115px]:shadow-xl"
         >
             <Image
                 src={webAppImg}

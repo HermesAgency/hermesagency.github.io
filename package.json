@@ -1,7 +1,7 @@
 {
   "name": "hermes-final-rebuild",
   "type": "module",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "@studio-freight/lenis": "^1.0.33",
     "astro": "^4.3.5",
     "astro-google-fonts-optimizer": "^0.2.2",
     "gsap": "^3.12.4",
