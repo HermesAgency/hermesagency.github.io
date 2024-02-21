@@ -233,6 +233,9 @@ mm.add('(min-width: 768px)', () => {
             opacity: 1,
             y: '0%',
             stagger: 0.1,
-        }
+            duration: 0.5,
+            ease: 'power4.out',
+        },
+        '>-0.2'
     )
 })
