@@ -55,8 +55,9 @@ mm.add('(max-width:767px)', () => {
             opacity: 1,
             translateX: '0',
             duration: 0.5,
-            ease: 'power3.inOut',
-        }
+            ease: 'power4.out',
+        },
+        '>-0.2'
     )
 
     servTL.fromTo(
@@ -104,8 +105,9 @@ mm.add('(min-width:768px)', () => {
             opacity: 1,
             translateX: '0',
             duration: 0.5,
-            ease: 'power3.inOut',
-        }
+            ease: 'power4.out',
+        },
+        '>-0.2'
     )
 
     servTL.fromTo(
