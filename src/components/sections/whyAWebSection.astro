@@ -7,7 +7,7 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
 
 <section
     id="Beneficios-de-una-web"
-    class="relative min-h-screen rounded-[32px] px-4 py-8 pb-40 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20 xl:px-20 xl:py-24"
+    class="relative min-h-screen overflow-hidden rounded-[32px] px-4 py-8 pb-40 sm:px-8 sm:pt-16 lg:px-16 lg:pt-20 xl:px-20 xl:py-24"
 >
     <div
         class="flex flex-col gap-10 md:gap-16 lg:relative lg:flex-row-reverse lg:justify-start lg:gap-0 xl:justify-between"
@@ -56,15 +56,19 @@ import webAdvantajesArrowTablet from '../../assets/arrows/arrow-whyaWeb-tablet.s
     <!-- Arrow between sections -->
     <Image
         src={webAdvantajesArrowTablet}
-        alt="arrow for whyAWeb"
+        alt="arrow for whyAWeb second title"
+        id="about-benefits-arrow"
         class="hidden lg:relative lg:left-64 lg:top-20 lg:block xl:mb-4 xl:scale-125"
     />
     <!-- Benefits section -->
     <div
         class="grid grid-cols-1 gap-9 pt-16 md:gap-12 lg:pt-24 xl:grid-cols-[0.8fr_1.1fr_1.1fr]"
     >
-        <h3 class="text-4xl font-bold md:text-5xl xl:col-span-1 xl:text-5xl">
-            Beneficios de digitalizar tu negocio
+        <h3
+            id="benefits__title"
+            class="text-4xl font-bold md:text-5xl xl:col-span-1 xl:text-5xl"
+        >
+            Los Beneficios de digitalizar tu negocio
         </h3>
         <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:col-span-2">
             <!-- Visibility Card -->
