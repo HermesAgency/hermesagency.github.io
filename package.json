@@ -1,7 +1,7 @@
 {
   "name": "hermes-final-rebuild",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.3.5",
     "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-seo": "^0.8.2",
     "gsap": "^3.12.4",
     "sharp": "^0.33.1",
     "split-type": "^0.3.4",
