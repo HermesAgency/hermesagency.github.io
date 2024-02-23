@@ -4,6 +4,7 @@ interface Props {
     title: string
 }
 import { Image } from 'astro:assets'
+import { SEO } from 'astro-seo'
 import HermesLogo from '../assets/Hermes_Logo_2024.svg'
 const { title } = Astro.props
 ---
@@ -17,6 +18,21 @@ const { title } = Astro.props
         <link rel="icon" type="image/svg+xml" href="/favicon-hermes.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <SEO
+            title="Hermes - Agencia web digital"
+            description="Una Agencia web vanguardista especializada en Diseño web profesional de Landing Pages,tiendas virtuales y Aplicaciones Web."
+            openGraph={{
+                basic: {
+                    title: 'Hermes - Agencia web digital',
+                    type: 'website',
+                    image: '/Social-Share-Image_compresed.jpg',
+                },
+                optional: {
+                    description:
+                        'Hermes,Una Agencia Web Entrerriana dedicada a crear paginas modernas e inovadoras.',
+                },
+            }}
+        />
         <GoogleFontsOptimizer
             url="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
         />
@@ -223,5 +239,6 @@ const { title } = Astro.props
         <script src="../scripts/aboutUs.js"></script>
         <script src="../scripts/ourServices.js"></script>
         <script src="../scripts/contactUsAnimations.js"></script>
+        <script src="../scripts/formSelectSwitch.js"></script>
     </body>
 </html>
