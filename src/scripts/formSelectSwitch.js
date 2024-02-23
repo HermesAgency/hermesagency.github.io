@@ -23,5 +23,10 @@ landingLinks.forEach((link) => {
 })
 
 advisoryLinks.forEach((link) => {
-    link.addEventListener('click', () => changeSelectOption('asesoria'))
+    link.addEventListener('click', () => {
+        if (link.tagName == 'BUTTON') {
+            window.location.href = '#contacto'
+        }
+        changeSelectOption('asesoria')
+    })
 })
